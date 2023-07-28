@@ -7,6 +7,13 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />  
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCYV5QDN4X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LCYV5QDN4X');
+  </script>
 </head>
 <body>
 
@@ -15,7 +22,7 @@
     </div>
 
     <div class="grid gap-5 py-7 my-7 px-5 md:grid-cols-2 lg:grid-cols-4">
-        <div class="card w-96 bg-base-300 shadow-xl mx-auto">
+        <div class="card w-80 bg-base-300 shadow-xl mx-auto">
           <div class="card-body">
             <div class="">
               <div style="display: flex; justify-content: space-between;">
@@ -26,7 +33,7 @@
               </div>
           </div>
         </div>
-        <div class="card w-96 bg-base-300 shadow-xl mx-auto">
+        <div class="card w-80 bg-base-300 shadow-xl mx-auto">
           <div class="card-body">
             <div class="">
               <div style="display: flex; justify-content: space-between;">
@@ -37,7 +44,7 @@
               </div>
           </div>
         </div>
-        <div class="card w-96 bg-base-300 shadow-xl mx-auto">
+        <div class="card w-80 bg-base-300 shadow-xl mx-auto">
           <div class="card-body">
             <div class="">
               <div style="display: flex; justify-content: space-between;">
@@ -48,7 +55,7 @@
               </div>
           </div>
         </div>
-        <div class="card w-96 bg-base-300 shadow-xl mx-auto">
+        <div class="card w-80 bg-base-300 shadow-xl mx-auto">
           <div class="card-body">
             <div class="">
               <div style="display: flex; justify-content: space-between;">
@@ -195,7 +202,7 @@ fetch(url)
 
     const layout =  {
         "showlegend": false,
-        //"height": 400,
+        "height": 250,
         "paper_bgcolor": "transparent",
         "plot_bgcolor": "transparent",
         "xaxis": {
@@ -213,7 +220,7 @@ fetch(url)
             showgrid: false,
         },
         margin: {
-            l: 20,
+            l: 25,
             r: 20,
             b: 20,
             t: 20,
@@ -221,9 +228,14 @@ fetch(url)
         },
     }
 
+    const config = {
+        responsive: true,
+        displayModeBar: false
+    }
+
     const dataPlot = [trace1, trace2];
 
-    Plotly.newPlot('bz_chart', dataPlot, layout);
+    Plotly.newPlot('bz_chart', dataPlot, layout, config);
 
     const trace3 = {
         x: timeTags,
@@ -232,30 +244,9 @@ fetch(url)
         name: 'Speed',
     };
 
-    const layout2 =  {
-        "showlegend": false,
-        //"height": 800,
-        "paper_bgcolor": "transparent",
-        "plot_bgcolor": "transparent",
-        "xaxis": {
-            showgrid: false,
-            "visible": false
-        },
-        "yaxis": {
-            showgrid: false,
-        },
-        margin: {
-            l: 20,
-            r: 20,
-            b: 20,
-            t: 20,
-            pad: 5
-        },
-    }
-
     const dataPlot2 = [trace3];
 
-    Plotly.newPlot('speed_chart', dataPlot2, layout2);
+    Plotly.newPlot('speed_chart', dataPlot2, layout, config);
 
     const trace4 = {
         x: timeTags,
@@ -264,30 +255,9 @@ fetch(url)
         name: 'Density',
     };
 
-    const layout3 =  {
-        "showlegend": false,
-        //"height": 800,
-        "paper_bgcolor": "transparent",
-        "plot_bgcolor": "transparent",
-        "xaxis": {
-            showgrid: false,
-            "visible": false
-        },
-        "yaxis": {
-            showgrid: false,
-        },
-        margin: {
-            l: 20,
-            r: 20,
-            b: 20,
-            t: 20,
-            pad: 5
-        },
-    }
-
     const dataPlot3 = [trace4];
 
-    Plotly.newPlot('density_chart', dataPlot3, layout3);
+    Plotly.newPlot('density_chart', dataPlot3, layout, config);
 
     const trace5 = {
         x: timeTags,
@@ -296,30 +266,9 @@ fetch(url)
         name: 'Temperature',
     };
 
-    const layout4 =  {
-        "showlegend": false,
-        //"height": 800,
-        "paper_bgcolor": "transparent",
-        "plot_bgcolor": "transparent",
-        "xaxis": {
-            showgrid: false,
-            "visible": false
-        },
-        "yaxis": {
-            showgrid: false,
-        },
-        margin: {
-            l: 20,
-            r: 20,
-            b: 20,
-            t: 20,
-            pad: 5
-        },
-    }
-
     const dataPlot4 = [trace5];
 
-    Plotly.newPlot('temp_chart', dataPlot4, layout4);
+    Plotly.newPlot('temp_chart', dataPlot4, layout, config);
 
 
 })
