@@ -38,6 +38,17 @@
           <div class="card-body">
             <div class="">
               <div style="display: flex; justify-content: space-between;">
+                <span>Magnetometer</span>
+                <div id="avg_magnetometer"></div>
+              </div>
+              <div id="magnetometer_chart"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card w-80 bg-base-300 shadow-xl mx-auto">
+          <div class="card-body">
+            <div class="">
+              <div style="display: flex; justify-content: space-between;">
                 <span>Density</span>
                 <div id="avg_density"></div>
               </div>
@@ -89,6 +100,26 @@
 
 <script>
   function updateChart() {
+    const url2 = "https://services.swpc.noaa.gov/json/goes/primary/magnetometers-6-hour.json";
+
+    fetch(url2)
+      .then(response => response.json())
+      .then(data => {
+        const timeTags2 = data.map(entry => entry.time_tag);
+        const hp = data.map(entry => parseFloat(entry.Hp));
+
+          let slope = (hp[hp.length - 1] - hp[hp.length - 2]) / 5;
+          document.getElementById("avg_magnetometer").innerHTML = slope.toFixed(2)
+        
+          var dataupdate5 = {
+            x: [timeTags2],
+            y: [hp]
+        };
+
+        Plotly.update('magnetometer_chart', dataupdate5);
+        
+        });
+
     const url = "https://services.swpc.noaa.gov/products/geospace/propagated-solar-wind-1-hour.json";
 
     fetch(url)
@@ -155,53 +186,99 @@
         };
         Plotly.update('temperature_chart', dataupdate4);
 
+
+
     })
       .catch(error => console.error('Error fetching data:', error));
 
 
 }
-// Step 1: Fetch the data from the URL
+const url2 = "https://services.swpc.noaa.gov/json/goes/primary/magnetometers-6-hour.json";
+
+  fetch(url2)
+    .then(response => response.json())
+    .then(data => {
+        //Parse the JSON data
+        const timeTags2 = data.map(entry => entry.time_tag);
+        const hp = data.map(entry => parseFloat(entry.Hp));
+
+        let slope = (hp[hp.length - 1] - hp[hp.length - 5]) / 5;
+        document.getElementById("avg_magnetometer").innerHTML = slope.toFixed(2);
+
+        const layout =  {
+            "showlegend": false,
+            "height": 250,
+            "paper_bgcolor": "transparent",
+            "plot_bgcolor": "transparent",
+            "xaxis": {
+                showgrid: false,
+                "visible": false
+            },
+            "yaxis": {
+                showgrid: false,
+            },
+            margin: {
+                l: 25,
+                r: 20,
+                b: 20,
+                t: 20,
+                pad: 5
+            },
+        }
+
+        const config = {
+            responsive: true,
+            displayModeBar: false
+        }
+      
+        const trace6 = {
+        x: timeTags2,
+        y: hp,
+        mode: 'lines',
+        name: 'Magnetometer',
+    };
+
+    Plotly.newPlot('magnetometer_chart', [trace6], layout, config);
+      
+      });
+
 const url = "https://services.swpc.noaa.gov/products/geospace/propagated-solar-wind-1-hour.json";
 
 fetch(url)
-.then(response => response.json())
-.then(data => {
-    //Parse the JSON data
-    const timeTags = data.slice(1).map(row => row[0]);
-    const bz = data.slice(1).map(row => parseFloat(row[6]));
-    const bt = data.slice(1).map(row => parseFloat(row[7]));
-    const speed = data.slice(1).map(row => parseFloat(row[1]));
-    const density = data.slice(1).map(row => parseFloat(row[2]));
-    const temperature = data.slice(1).map(row => parseFloat(row[3]));
+  .then(response => response.json())
+  .then(data => {
+      //Parse the JSON data
+      const timeTags = data.slice(1).map(row => row[0]);
+      const bz = data.slice(1).map(row => parseFloat(row[6]));
+      const bt = data.slice(1).map(row => parseFloat(row[7]));
+      const speed = data.slice(1).map(row => parseFloat(row[1]));
+      const density = data.slice(1).map(row => parseFloat(row[2]));
+      const temperature = data.slice(1).map(row => parseFloat(row[3]));
 
-    //calculate average bz
-    let sum_bz = 0;
-    for (let i = 0; i < bz.length; i++) {
-        sum_bz += bz[i];
-    }
-    let avg = sum_bz / bz.length;
-    document.getElementById("avg_bz").innerHTML = avg.toFixed(2);
+      let sum_bz = 0;
+      for (let i = 0; i < bz.length; i++) {
+          sum_bz += bz[i];
+      }
+      let avg = sum_bz / bz.length;
+      document.getElementById("avg_bz").innerHTML = avg.toFixed(2);
 
-    //calculate average speed
-    let sum_speed = 0;
-    for (let i = 0; i < speed.length; i++) {
-        sum_speed += speed[i];
-    }
-    let avg2 = sum_speed / speed.length;
-    document.getElementById("avg_speed").innerHTML = avg2.toFixed(2);
+      let sum_speed = 0;
+      for (let i = 0; i < speed.length; i++) {
+          sum_speed += speed[i];
+      }
+      let avg2 = sum_speed / speed.length;
+      document.getElementById("avg_speed").innerHTML = avg2.toFixed(2);
 
-    //calculate average density
-    let sum_density = 0;
-    for (let i = 0; i < density.length; i++) {
-        sum_density += density[i];
-    }
-    let avg3 = sum_density / density.length;
-    document.getElementById("avg_density").innerHTML = avg3.toFixed(2);
+      let sum_density = 0;
+      for (let i = 0; i < density.length; i++) {
+          sum_density += density[i];
+      }
+      let avg3 = sum_density / density.length;
+      document.getElementById("avg_density").innerHTML = avg3.toFixed(2);
 
-    document.getElementById("avg_temp").innerHTML = temperature[temperature.length - 1];
+      document.getElementById("avg_temp").innerHTML = temperature[temperature.length - 1];
 
 
-    // Step 4: Create a Plotly chart
     const trace1 = {
     x: timeTags,
     y: bz,
