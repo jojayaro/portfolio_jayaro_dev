@@ -78,6 +78,17 @@
               </div>
           </div>
         </div>
+        <div class="card w-80 bg-base-300 shadow-xl mx-auto">
+          <div class="card-body">
+            <div class="">
+              <div style="display: flex; justify-content: space-between;">
+                <span>Kyoto Dst</span>
+                <div id="avg_dst"></div>
+              </div>
+              <div id="dst_chart"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <footer class="footer items-center p-4 bg-neutral text-neutral-content bottom-0 mt-auto">
@@ -99,275 +110,96 @@
 
 
 <script>
-  function updateChart() {
-    const url2 = "https://services.swpc.noaa.gov/json/goes/primary/magnetometers-6-hour.json";
+  const chartConfig = {
+    responsive: true,
+    displayModeBar: false
+  };
 
-    fetch(url2)
-      .then(response => response.json())
-      .then(data => {
-        const timeTags2 = data.map(entry => entry.time_tag);
-        const hp = data.map(entry => parseFloat(entry.Hp));
+  const chartLayout = {
+    showlegend: false,
+    height: 250,
+    paper_bgcolor: "transparent",
+    plot_bgcolor: "transparent",
+    xaxis: { showgrid: false, visible: false },
+    yaxis: { showgrid: false },
+    margin: { l: 25, r: 20, b: 20, t: 20, pad: 5 }
+  };
 
-          let slope = (hp[hp.length - 1] - hp[hp.length - 2]) / 5;
-          document.getElementById("avg_magnetometer").innerHTML = slope.toFixed(2)
-        
-          var dataupdate5 = {
-            x: [timeTags2],
-            y: [hp]
-        };
+  function createChart(elementId, data, layout = chartLayout, config = chartConfig) {
+    Plotly.newPlot(elementId, data, layout, config);
+  }
 
-        Plotly.update('magnetometer_chart', dataupdate5);
-        
-        });
+  function updateChart(elementId, data) {
+    Plotly.update(elementId, data);
+  }
 
-    const url = "https://services.swpc.noaa.gov/products/geospace/propagated-solar-wind-1-hour.json";
+  function calculateAverage(arr) {
+    return arr.reduce((a, b) => a + b, 0) / arr.length;
+  }
 
+  function updateAverageDisplay(elementId, value) {
+    document.getElementById(elementId).innerHTML = value.toFixed(2);
+  }
+
+  function fetchAndProcessData(url, processFunction) {
     fetch(url)
       .then(response => response.json())
-      .then(data => {
-        const timeTags = data.slice(1).map(row => row[0]);
-        const bz = data.slice(1).map(row => parseFloat(row[6]));
-        const bt = data.slice(1).map(row => parseFloat(row[7]));
-        const speed = data.slice(1).map(row => parseFloat(row[1]));
-        const density = data.slice(1).map(row => parseFloat(row[2]));
-        const temperature = data.slice(1).map(row => parseFloat(row[3]));
-
-        let sum_bz = 0;
-        for (let i = 0; i < bz.length; i++) {
-        sum_bz += bz[i];
-        }
-
-        let avg = sum_bz / bz.length;
-
-        document.getElementById("avg_bz").innerHTML = avg.toFixed(2);
-
-        let sum_speed = 0;
-        for (let i = 0; i < speed.length; i++) {
-            sum_speed += speed[i];
-        }
-
-        let avg2 = sum_speed / speed.length;
-
-        document.getElementById("avg_speed").innerHTML = avg2.toFixed(2);
-
-        let sum_density = 0;
-
-        for (let i = 0; i < density.length; i++) {
-            sum_density += density[i];
-        }
-
-        let avg3 = sum_density / density.length;
-
-        document.getElementById("avg_density").innerHTML = avg3.toFixed(2);
-
-        document.getElementById("avg_temp").innerHTML = temperature[temperature.length - 1];
-
-        var dataupdate = {
-            x: [timeTags, timeTags],
-            y: [bz, bt]
-        };
-        Plotly.update('bz_chart', dataupdate);
-
-        var dataupdate2 = {
-            x: [timeTags],
-            y: [speed]
-        };
-        Plotly.update('speed_chart', dataupdate2);
-
-        var dataupdate3 = {
-            x: [timeTags],
-            y: [density]
-        };
-        Plotly.update('density_chart', dataupdate3);
-
-        var dataupdate4 = {
-            x: [timeTags],
-            y: [temperature]
-        };
-        Plotly.update('temperature_chart', dataupdate4);
-
-
-
-    })
+      .then(processFunction)
       .catch(error => console.error('Error fetching data:', error));
+  }
 
+  function processMagnetometerData(data) {
+    const timeTags = data.map(entry => entry.time_tag);
+    const hp = data.map(entry => parseFloat(entry.Hp));
+    const slope = (hp[hp.length - 1] - hp[hp.length - 5]) / 5;
 
-}
-const url2 = "https://services.swpc.noaa.gov/json/goes/primary/magnetometers-6-hour.json";
+    updateAverageDisplay("avg_magnetometer", slope);
+    createChart('magnetometer_chart', [{x: timeTags, y: hp, mode: 'lines', name: 'Magnetometer'}]);
+  }
 
-  fetch(url2)
-    .then(response => response.json())
-    .then(data => {
-        //Parse the JSON data
-        const timeTags2 = data.map(entry => entry.time_tag);
-        const hp = data.map(entry => parseFloat(entry.Hp));
+  function processSolarWindData(data) {
+    const [, ...dataRows] = data;
+    const timeTags = dataRows.map(row => row[0]);
+    const speed = dataRows.map(row => parseFloat(row[1]));
+    const density = dataRows.map(row => parseFloat(row[2]));
+    const temperature = dataRows.map(row => parseFloat(row[3]));
+    const bz = dataRows.map(row => parseFloat(row[6]));
+    const bt = dataRows.map(row => parseFloat(row[7]));
 
-        let slope = (hp[hp.length - 1] - hp[hp.length - 5]) / 5;
-        document.getElementById("avg_magnetometer").innerHTML = slope.toFixed(2);
+    updateAverageDisplay("avg_bz", calculateAverage(bz));
+    updateAverageDisplay("avg_speed", calculateAverage(speed));
+    updateAverageDisplay("avg_density", calculateAverage(density));
+    updateAverageDisplay("avg_temp", temperature[temperature.length - 1]);
 
-        const layout =  {
-            "showlegend": false,
-            "height": 250,
-            "paper_bgcolor": "transparent",
-            "plot_bgcolor": "transparent",
-            "xaxis": {
-                showgrid: false,
-                "visible": false
-            },
-            "yaxis": {
-                showgrid: false,
-            },
-            margin: {
-                l: 25,
-                r: 20,
-                b: 20,
-                t: 20,
-                pad: 5
-            },
-        }
+    createChart('bz_chart', [
+      {x: timeTags, y: bz, mode: 'lines', name: 'Bz'},
+      {x: timeTags, y: bt, mode: 'lines', name: 'Bt'}
+    ]);
+    createChart('speed_chart', [{x: timeTags, y: speed, mode: 'lines', name: 'Speed'}]);
+    createChart('density_chart', [{x: timeTags, y: density, mode: 'lines', name: 'Density'}]);
+    createChart('temp_chart', [{x: timeTags, y: temperature, mode: 'lines', name: 'Temperature'}]);
+  }
 
-        const config = {
-            responsive: true,
-            displayModeBar: false
-        }
-      
-        const trace6 = {
-        x: timeTags2,
-        y: hp,
-        mode: 'lines',
-        name: 'Magnetometer',
-    };
+  function processDstData(data) {
+    const [, ...dataRows] = data;
+    const timeTags = dataRows.map(row => row[0]);
+    const dstValues = dataRows.map(row => parseFloat(row[1]));
 
-    Plotly.newPlot('magnetometer_chart', [trace6], layout, config);
-      
-      });
+    updateAverageDisplay("avg_dst", calculateAverage(dstValues));
+    createChart('dst_chart', [{x: timeTags, y: dstValues, mode: 'lines', name: 'Dst'}]);
+  }
 
-const url = "https://services.swpc.noaa.gov/products/geospace/propagated-solar-wind-1-hour.json";
+  function updateAllCharts() {
+    fetchAndProcessData("https://services.swpc.noaa.gov/json/goes/primary/magnetometers-6-hour.json", processMagnetometerData);
+    fetchAndProcessData("https://services.swpc.noaa.gov/products/geospace/propagated-solar-wind-1-hour.json", processSolarWindData);
+    fetchAndProcessData("https://services.swpc.noaa.gov/products/kyoto-dst.json", processDstData);
+  }
 
-fetch(url)
-  .then(response => response.json())
-  .then(data => {
-      //Parse the JSON data
-      const timeTags = data.slice(1).map(row => row[0]);
-      const bz = data.slice(1).map(row => parseFloat(row[6]));
-      const bt = data.slice(1).map(row => parseFloat(row[7]));
-      const speed = data.slice(1).map(row => parseFloat(row[1]));
-      const density = data.slice(1).map(row => parseFloat(row[2]));
-      const temperature = data.slice(1).map(row => parseFloat(row[3]));
+  // Initial chart setup
+  updateAllCharts();
 
-      let sum_bz = 0;
-      for (let i = 0; i < bz.length; i++) {
-          sum_bz += bz[i];
-      }
-      let avg = sum_bz / bz.length;
-      document.getElementById("avg_bz").innerHTML = avg.toFixed(2);
-
-      let sum_speed = 0;
-      for (let i = 0; i < speed.length; i++) {
-          sum_speed += speed[i];
-      }
-      let avg2 = sum_speed / speed.length;
-      document.getElementById("avg_speed").innerHTML = avg2.toFixed(2);
-
-      let sum_density = 0;
-      for (let i = 0; i < density.length; i++) {
-          sum_density += density[i];
-      }
-      let avg3 = sum_density / density.length;
-      document.getElementById("avg_density").innerHTML = avg3.toFixed(2);
-
-      document.getElementById("avg_temp").innerHTML = temperature[temperature.length - 1];
-
-
-    const trace1 = {
-    x: timeTags,
-    y: bz,
-    mode: 'lines',
-    name: 'Bz',
-    };
-
-    const trace2 = {
-    x: timeTags,
-    y: bt,
-    mode: 'lines',
-    name: 'Bt',
-    };
-
-    const layout =  {
-        "showlegend": false,
-        "height": 250,
-        "paper_bgcolor": "transparent",
-        "plot_bgcolor": "transparent",
-        "xaxis": {
-            showgrid: false,
-            "visible": false
-        },
-        "yaxis": {
-            showgrid: false,
-        },
-        "xaxis2": {
-            showgrid: false,
-        "visible": false
-        },
-        "yaxis2": {
-            showgrid: false,
-        },
-        margin: {
-            l: 25,
-            r: 20,
-            b: 20,
-            t: 20,
-            pad: 5
-        },
-    }
-
-    const config = {
-        responsive: true,
-        displayModeBar: false
-    }
-
-    const dataPlot = [trace1, trace2];
-
-    Plotly.newPlot('bz_chart', dataPlot, layout, config);
-
-    const trace3 = {
-        x: timeTags,
-        y: speed,
-        mode: 'lines',
-        name: 'Speed',
-    };
-
-    const dataPlot2 = [trace3];
-
-    Plotly.newPlot('speed_chart', dataPlot2, layout, config);
-
-    const trace4 = {
-        x: timeTags,
-        y: density,
-        mode: 'lines',
-        name: 'Density',
-    };
-
-    const dataPlot3 = [trace4];
-
-    Plotly.newPlot('density_chart', dataPlot3, layout, config);
-
-    const trace5 = {
-        x: timeTags,
-        y: temperature,
-        mode: 'lines',
-        name: 'Temperature',
-    };
-
-    const dataPlot4 = [trace5];
-
-    Plotly.newPlot('temp_chart', dataPlot4, layout, config);
-
-
-})
-.catch(error => console.error('Error fetching data:', error));
-
-setInterval(updateChart, 60000);
+  // Update charts every minute
+  setInterval(updateAllCharts, 60000);
 </script>
 
 </body>
