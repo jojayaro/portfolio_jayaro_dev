@@ -151,24 +151,24 @@
   function processMagnetometerData(data) {
     const timeTags = data.map(entry => entry.time_tag);
     const hp = data.map(entry => parseFloat(entry.Hp));
-    const slope = (hp[hp.length - 1] - hp[hp.length - 5]) / 5;
-
-    updateAverageDisplay("avg_magnetometer", slope);
+    //const slope = (hp[hp.length - 1] - hp[hp.length - 5]) / 5;
+    const last = hp[hp.length - 1];
+    updateAverageDisplay("avg_magnetometer", last);
     createChart('magnetometer_chart', [{x: timeTags, y: hp, mode: 'lines', name: 'Magnetometer'}]);
   }
 
   function processSolarWindData(data) {
     const [, ...dataRows] = data;
-    const timeTags = dataRows.map(row => row[0]);
-    const speed = dataRows.map(row => parseFloat(row[1]));
-    const density = dataRows.map(row => parseFloat(row[2]));
-    const temperature = dataRows.map(row => parseFloat(row[3]));
-    const bz = dataRows.map(row => parseFloat(row[6]));
-    const bt = dataRows.map(row => parseFloat(row[7]));
+    const timeTags = dataRows.slice(-120).map(row => row[0]);
+    const speed = dataRows.slice(-120).map(row => parseFloat(row[1]));
+    const density = dataRows.slice(-120).map(row => parseFloat(row[2]));
+    const temperature = dataRows.slice(-120).map(row => parseFloat(row[3]));
+    const bz = dataRows.slice(-120).map(row => parseFloat(row[6]));
+    const bt = dataRows.slice(-120).map(row => parseFloat(row[7]));
 
-    updateAverageDisplay("avg_bz", calculateAverage(bz));
-    updateAverageDisplay("avg_speed", calculateAverage(speed));
-    updateAverageDisplay("avg_density", calculateAverage(density));
+    updateAverageDisplay("avg_bz", bz[bz.length - 1]);
+    updateAverageDisplay("avg_speed", speed[speed.length - 1]);
+    updateAverageDisplay("avg_density", density[density.length - 1]);
     updateAverageDisplay("avg_temp", temperature[temperature.length - 1]);
 
     createChart('bz_chart', [
@@ -182,8 +182,8 @@
 
   function processDstData(data) {
     const [, ...dataRows] = data;
-    const timeTags = dataRows.map(row => row[0]);
-    const dstValues = dataRows.map(row => parseFloat(row[1]));
+    const timeTags = dataRows.map(row => row[0]).slice(-12);
+    const dstValues = dataRows.map(row => parseFloat(row[1])).slice(-12);
 
     updateAverageDisplay("avg_dst", calculateAverage(dstValues));
     createChart('dst_chart', [{x: timeTags, y: dstValues, mode: 'lines', name: 'Dst'}]);
@@ -191,7 +191,7 @@
 
   function updateAllCharts() {
     fetchAndProcessData("https://services.swpc.noaa.gov/json/goes/primary/magnetometers-6-hour.json", processMagnetometerData);
-    fetchAndProcessData("https://services.swpc.noaa.gov/products/geospace/propagated-solar-wind-1-hour.json", processSolarWindData);
+    fetchAndProcessData("https://services.swpc.noaa.gov/products/geospace/propagated-solar-wind.json", processSolarWindData);
     fetchAndProcessData("https://services.swpc.noaa.gov/products/kyoto-dst.json", processDstData);
   }
 
