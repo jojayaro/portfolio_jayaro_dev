@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
   <title>Solar Wind Monitor</title>
   <meta charset="UTF-8">
@@ -11,215 +12,213 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCYV5QDN4X"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-LCYV5QDN4X');
   </script>
 </head>
+
 <body class="flex flex-col min-h-screen">
 
-    <div class="navbar bg-base-300">
-        <div class="flex-1">
-            <a class="btn btn-ghost normal-case text-xl">Solar Wind Monitor</a>
-        </div>
-        <div class="flex-none">
-            <div class="dropdown dropdown-end">
-                <label tabindex="0" class="btn btn-ghost lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-                    </svg>
-                </label>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </div>
-            <ul class="menu menu-horizontal px-1 hidden lg:flex">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </div>
+  <div class="navbar bg-base-300">
+    <div class="flex-1">
+      <a class="btn btn-ghost normal-case text-xl">Solar Wind Monitor</a>
     </div>
+    <div class="flex-none">
+      <div class="dropdown dropdown-end">
+        <label tabindex="0" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
+        </label>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <ul class="menu menu-horizontal px-1 hidden lg:flex">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </div>
 
-    <div class="grid gap-5 py-7 my-7 px-5 md:grid-cols-2 lg:grid-cols-4 align-middle">
-        <div class="card w-80 bg-base-300 shadow-xl mx-auto">
-          <div class="card-body">
-            <div class="">
-              <div style="display: flex; justify-content: space-between;">
-                <span>Bt/Bz</span>
-                <div id="avg_bz"></div>
-              </div>
-                <div id="bz_chart"></div>
-              </div>
+  <div class="grid gap-5 py-7 my-7 px-5 md:grid-cols-2 lg:grid-cols-4 align-middle">
+    <div class="card w-80 bg-base-300 shadow-xl mx-auto">
+      <div class="card-body">
+        <div class="">
+          <div style="display: flex; justify-content: space-between;">
+            <span>Bt/Bz</span>
+            <div id="last_bz"></div>
           </div>
-        </div>
-        <div class="card w-80 bg-base-300 shadow-xl mx-auto">
-          <div class="card-body">
-            <div class="">
-              <div style="display: flex; justify-content: space-between;">
-                <span>Magnetometer</span>
-                <div id="avg_magnetometer"></div>
-              </div>
-              <div id="magnetometer_chart"></div>
-            </div>
-          </div>
-        </div>
-        <div class="card w-80 bg-base-300 shadow-xl mx-auto">
-          <div class="card-body">
-            <div class="">
-              <div style="display: flex; justify-content: space-between;">
-                <span>Density</span>
-                <div id="avg_density"></div>
-              </div>
-                <div id="density_chart"></div>
-              </div>
-          </div>
-        </div>
-        <div class="card w-80 bg-base-300 shadow-xl mx-auto">
-          <div class="card-body">
-            <div class="">
-              <div style="display: flex; justify-content: space-between;">
-                <span>Speed</span>
-                <div id="avg_speed"></div>
-              </div>
-                <div id="speed_chart"></div>
-              </div>
-          </div>
-        </div>
-        <div class="card w-80 bg-base-300 shadow-xl mx-auto">
-          <div class="card-body">
-            <div class="">
-              <div style="display: flex; justify-content: space-between;">
-                <span>Temperature</span>
-                <div id="avg_temp"></div>
-              </div>
-                <div id="temp_chart"></div>
-              </div>
-          </div>
-        </div>
-        <div class="card w-80 bg-base-300 shadow-xl mx-auto">
-          <div class="card-body">
-            <div class="">
-              <div style="display: flex; justify-content: space-between;">
-                <span>Kyoto Dst</span>
-                <div id="avg_dst"></div>
-              </div>
-              <div id="dst_chart"></div>
-            </div>
-          </div>
+          <div id="bz_chart"></div>
         </div>
       </div>
-
-      <footer class="footer items-center p-4 bg-neutral text-neutral-content bottom-0 mt-auto">
-        <div class="grid-flow-col pt-1 place-self-center">
-          <p style="font-size: 1.2rem;">Jesus Jayaro</p>
-        </div> 
-        <div class="grid-flow-col gap-8 place-self-center">
-          <a href="https://github.com/jojayaro">
-            <i class="bi bi-github" style="font-size: 1.5rem"></i>
-          </a>
-          <a href="https://ca.linkedin.com/in/jayaro">
-            <i class="bi bi-linkedin" style="font-size: 1.5rem"></i>
-          </a>
-          <a href="https://www.flickr.com/photos/xchus">
-            <i class="bi bi-image" style="font-size: 1.5rem"></i>
-          </a>
+    </div>
+    <div class="card w-80 bg-base-300 shadow-xl mx-auto">
+      <div class="card-body">
+        <div class="">
+          <div style="display: flex; justify-content: space-between;">
+            <span>Magnetometer</span>
+            <div id="last_magnetometer"></div>
+          </div>
+          <div id="magnetometer_chart"></div>
         </div>
-      </footer>
+      </div>
+    </div>
+    <div class="card w-80 bg-base-300 shadow-xl mx-auto">
+      <div class="card-body">
+        <div class="">
+          <div style="display: flex; justify-content: space-between;">
+            <span>Density</span>
+            <div id="last_density"></div>
+          </div>
+          <div id="density_chart"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card w-80 bg-base-300 shadow-xl mx-auto">
+      <div class="card-body">
+        <div class="">
+          <div style="display: flex; justify-content: space-between;">
+            <span>Speed</span>
+            <div id="last_speed"></div>
+          </div>
+          <div id="speed_chart"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card w-80 bg-base-300 shadow-xl mx-auto">
+      <div class="card-body">
+        <div class="">
+          <div style="display: flex; justify-content: space-between;">
+            <span>Temperature</span>
+            <div id="last_temp"></div>
+          </div>
+          <div id="temp_chart"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card w-80 bg-base-300 shadow-xl mx-auto">
+      <div class="card-body">
+        <div class="">
+          <div style="display: flex; justify-content: space-between;">
+            <span>Kyoto Dst</span>
+            <div id="last_dst"></div>
+          </div>
+          <div id="dst_chart"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer items-center p-4 bg-neutral text-neutral-content bottom-0 mt-auto">
+    <div class="grid-flow-col pt-1 place-self-center">
+      <p style="font-size: 1.2rem;">Jesus Jayaro</p>
+    </div>
+    <div class="grid-flow-col gap-8 place-self-center">
+      <a href="https://github.com/jojayaro">
+        <i class="bi bi-github" style="font-size: 1.5rem"></i>
+      </a>
+      <a href="https://ca.linkedin.com/in/jayaro">
+        <i class="bi bi-linkedin" style="font-size: 1.5rem"></i>
+      </a>
+      <a href="https://www.flickr.com/photos/xchus">
+        <i class="bi bi-image" style="font-size: 1.5rem"></i>
+      </a>
+    </div>
+  </footer>
 
 
-<script>
-  const chartConfig = {
-    responsive: true,
-    displayModeBar: false
-  };
+  <script>
+    const chartConfig = {
+      responsive: true,
+      displayModeBar: false
+    };
 
-  const chartLayout = {
-    showlegend: false,
-    height: 250,
-    paper_bgcolor: "transparent",
-    plot_bgcolor: "transparent",
-    xaxis: { showgrid: false, visible: false },
-    yaxis: { showgrid: false },
-    margin: { l: 25, r: 20, b: 20, t: 20, pad: 5 }
-  };
+    const chartLayout = {
+      showlegend: false,
+      height: 250,
+      paper_bgcolor: "transparent",
+      plot_bgcolor: "transparent",
+      xaxis: { showgrid: false, visible: false },
+      yaxis: { showgrid: false },
+      margin: { l: 25, r: 20, b: 20, t: 20, pad: 5 }
+    };
 
-  function createChart(elementId, data, layout = chartLayout, config = chartConfig) {
-    Plotly.newPlot(elementId, data, layout, config);
-  }
+    function createChart(elementId, data, layout = chartLayout, config = chartConfig) {
+      Plotly.newPlot(elementId, data, layout, config);
+    }
 
-  function updateChart(elementId, data) {
-    Plotly.update(elementId, data);
-  }
+    function updateChart(elementId, data) {
+      Plotly.update(elementId, data);
+    }
 
-  function calculateAverage(arr) {
-    return arr.reduce((a, b) => a + b, 0) / arr.length;
-  }
+    function calculateAverage(arr) {
+      return arr.reduce((a, b) => a + b, 0) / arr.length;
+    }
 
-  function updateLastDisplay(elementId, value) {
-    document.getElementById(elementId).innerHTML = value.toFixed(2);
-  }
+    function updateLastDisplay(elementId, value) {
+      document.getElementById(elementId).innerHTML = value;
+    }
 
-  function fetchAndProcessData(url, processFunction) {
-    fetch(url)
-      .then(response => response.json())
-      .then(processFunction)
-      .catch(error => console.error('Error fetching data:', error));
-  }
+    function fetchAndProcessData(url, processFunction) {
+      fetch(url)
+        .then(response => response.json())
+        .then(processFunction)
+        .catch(error => console.error('Error fetching data:', error));
+    }
 
-  function processMagnetometerData(data) {
-    const timeTags = data.map(entry => entry.time_tag);
-    const hp = data.map(entry => parseFloat(entry.Hp));
-    //const slope = (hp[hp.length - 1] - hp[hp.length - 5]) / 5;
-    const last = hp[hp.length - 1];
-    updateLastDisplay("avg_magnetometer", last);
-    createChart('magnetometer_chart', [{x: timeTags, y: hp, mode: 'lines', name: 'Magnetometer'}]);
-  }
+    function processMagnetometerData(data) {
+      const timeTags = data.map(entry => entry.time_tag);
+      const hp = data.map(entry => parseFloat(entry.Hp));
+      updateLastDisplay("last_magnetometer", (hp[hp.length - 1]).toFixed(1) + " nT");
+      createChart('magnetometer_chart', [{ x: timeTags, y: hp, mode: 'lines', name: 'Magnetometer' }]);
+    }
 
-  function processSolarWindData(data) {
-    const [, ...dataRows] = data;
-    const timeTags = dataRows.slice(-120).map(row => row[0]);
-    const speed = dataRows.slice(-120).map(row => parseFloat(row[1]));
-    const density = dataRows.slice(-120).map(row => parseFloat(row[2]));
-    const temperature = dataRows.slice(-120).map(row => parseFloat(row[3]));
-    const bz = dataRows.slice(-120).map(row => parseFloat(row[6]));
-    const bt = dataRows.slice(-120).map(row => parseFloat(row[7]));
+    function processSolarWindData(data) {
+      const [, ...dataRows] = data;
+      const timeTags = dataRows.slice(-120).map(row => row[0]);
+      const speed = dataRows.slice(-120).map(row => parseFloat(row[1]));
+      const density = dataRows.slice(-120).map(row => parseFloat(row[2]));
+      const temperature = dataRows.slice(-120).map(row => parseFloat(row[3]));
+      const bz = dataRows.slice(-120).map(row => parseFloat(row[6]));
+      const bt = dataRows.slice(-120).map(row => parseFloat(row[7]));
 
-    updateLastDisplay("avg_bz", bz[bz.length - 1]);
-    updateLastDisplay("avg_speed", speed[speed.length - 1]);
-    updateLastDisplay("avg_density", density[density.length - 1]);
-    updateLastDisplay("avg_temp", temperature[temperature.length - 1]);
+      updateLastDisplay("last_bz", (bz[bz.length - 1]).toFixed(1) + " nT");
+      updateLastDisplay("last_speed", (speed[speed.length - 1]).toFixed(1) + " km/s");
+      updateLastDisplay("last_density", (density[density.length - 1]).toFixed(1) + " cm^-3");
+      updateLastDisplay("last_temp", (temperature[temperature.length - 1]).toFixed(1) + " K");
 
-    createChart('bz_chart', [
-      {x: timeTags, y: bz, mode: 'lines', name: 'Bz'},
-      {x: timeTags, y: bt, mode: 'lines', name: 'Bt'}
-    ]);
-    createChart('speed_chart', [{x: timeTags, y: speed, mode: 'lines', name: 'Speed'}]);
-    createChart('density_chart', [{x: timeTags, y: density, mode: 'lines', name: 'Density'}]);
-    createChart('temp_chart', [{x: timeTags, y: temperature, mode: 'lines', name: 'Temperature'}]);
-  }
+      createChart('bz_chart', [
+        { x: timeTags, y: bz, mode: 'lines', name: 'Bz' },
+        { x: timeTags, y: bt, mode: 'lines', name: 'Bt' }
+      ]);
+      createChart('speed_chart', [{ x: timeTags, y: speed, mode: 'lines', name: 'Speed' }]);
+      createChart('density_chart', [{ x: timeTags, y: density, mode: 'lines', name: 'Density' }]);
+      createChart('temp_chart', [{ x: timeTags, y: temperature, mode: 'lines', name: 'Temperature' }]);
+    }
 
-  function processDstData(data) {
-    const [, ...dataRows] = data;
-    const timeTags = dataRows.map(row => row[0]).slice(-12);
-    const dstValues = dataRows.map(row => parseFloat(row[1])).slice(-12);
+    function processDstData(data) {
+      const [, ...dataRows] = data;
+      const timeTags = dataRows.map(row => row[0]).slice(-12);
+      const dstValues = dataRows.map(row => parseFloat(row[1])).slice(-12);
 
-    updateLastDisplay("avg_dst", dstValues[dstValues.length - 1]);
-    createChart('dst_chart', [{x: timeTags, y: dstValues, mode: 'lines', name: 'Dst'}]);
-  }
+      updateLastDisplay("last_dst", (dstValues[dstValues.length - 1]).toFixed(1) + " nT");
+      createChart('dst_chart', [{ x: timeTags, y: dstValues, mode: 'lines', name: 'Dst' }]);
+    }
 
-  function updateAllCharts() {
-    fetchAndProcessData("https://services.swpc.noaa.gov/json/goes/primary/magnetometers-6-hour.json", processMagnetometerData);
-    fetchAndProcessData("https://services.swpc.noaa.gov/products/geospace/propagated-solar-wind.json", processSolarWindData);
-    fetchAndProcessData("https://services.swpc.noaa.gov/products/kyoto-dst.json", processDstData);
-  }
+    function updateAllCharts() {
+      fetchAndProcessData("https://services.swpc.noaa.gov/json/goes/primary/magnetometers-6-hour.json", processMagnetometerData);
+      fetchAndProcessData("https://services.swpc.noaa.gov/products/geospace/propagated-solar-wind.json", processSolarWindData);
+      fetchAndProcessData("https://services.swpc.noaa.gov/products/kyoto-dst.json", processDstData);
+    }
 
-  // Initial chart setup
-  updateAllCharts();
+    updateAllCharts();
 
-  // Update charts every minute
-  setInterval(updateAllCharts, 60000);
-</script>
+    setInterval(updateAllCharts, 60000);
+  </script>
 
 </body>
+
 </html>
