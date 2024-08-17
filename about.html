@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+  <title>About - Solar Wind Monitor</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCYV5QDN4X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LCYV5QDN4X');
+  </script>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <div class="navbar bg-base-300">
+        <div class="flex-1">
+            <a class="btn btn-ghost normal-case text-xl">Solar Wind Monitor</a>
+        </div>
+        <div class="flex-none">
+            <div class="dropdown dropdown-end">
+                <label tabindex="0" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <ul class="menu menu-horizontal px-1 hidden lg:flex">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="flex-grow container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-4">About Solar Wind Monitor</h1>
+        <p class="mb-4">
+            Solar Wind Monitor is a real-time dashboard that displays various solar wind parameters and their effects on Earth's magnetosphere. This tool is designed to help space weather enthusiasts, researchers, and anyone interested in solar-terrestrial physics to monitor current space weather conditions.
+        </p>
+        <p class="mb-4">
+            The data displayed on this dashboard is sourced from various space weather monitoring services, including NOAA's Space Weather Prediction Center (SWPC).
+        </p>
+        <h2 class="text-2xl font-bold mb-2">Parameters Monitored:</h2>
+        <ul class="list-disc list-inside mb-4">
+            <li>Bt/Bz: Interplanetary Magnetic Field components (Last 2 hours)</li>
+            <li>Solar Wind Density (Last 2 hours)</li>
+            <li>Solar Wind Speed (Last 2 hours)</li>
+            <li>Solar Wind Temperature (Last 2 hours)</li>
+            <li>Kyoto Dst Index (Last 12 hours)</li>
+            <li>Magnetometer readings (Last 6 hours)</li>
+        </ul>
+        <p class="mb-8">
+            For more information about space weather and its effects, please visit <a href="https://www.swpc.noaa.gov/" class="text-blue-500 hover:underline">NOAA's Space Weather Prediction Center</a>.
+        </p>
+
+        <h2 class="text-2xl font-bold mt-8 mb-4">About the Developer</h2>
+        <p class="mb-4">
+            Hello! I'm Jesus Jayaro, a Data Engineer and Reliability and Data Strategist with a focus on leveraging data for customer success and continuous improvement. I have extensive experience in operational leadership, delivering value, and exceeding customer expectations in every service and product delivered.
+        </p>
+        <p class="mb-4">
+            My technical expertise includes:
+        </p>
+        <ul class="list-disc list-inside mb-4">
+            <li>CS: Azure, Synapse, Fabric, Dynamics, Power Platform, SQL, Python, Plotly, Docker, Rust, JS</li>
+            <li>Quality: Incident Management, Root Cause Analysis, ISO 9001, Audits, Lean</li>
+            <li>Leadership: Digital Transformation, Energy and Environmental Management</li>
+        </ul>
+        <p class="mb-4">
+            I'm passionate about executing in-depth analyses and providing solutions to business processes and systems, improving efficiency, reliability, and customer satisfaction while minimizing costs and preventing non-productive time and recurrence.
+        </p>
+        <p class="mb-4">
+            When I'm not working on data and reliability projects, you can find me pursuing my hobbies which include Aurora and Storm Chasing, Photography, Mountain Biking, Urban Farming, and following Geopolitics.
+        </p>
+        <p>
+            Feel free to connect with me on <a href="https://ca.linkedin.com/in/jayaro" class="text-blue-500 hover:underline">LinkedIn</a> or check out my projects on <a href="https://github.com/jojayaro" class="text-blue-500 hover:underline">GitHub</a> or my photos on <a href="https://www.flickr.com/photos/xchus" class="text-blue-500 hover:underline">Flickr</a>.
+        </p>
+    </div>
+
+    <footer class="footer items-center p-4 bg-neutral text-neutral-content">
+        <div class="grid-flow-col pt-1 place-self-center">
+          <p style="font-size: 1.2rem;">Jesus Jayaro</p>
+        </div> 
+        <div class="grid-flow-col gap-8 place-self-center">
+          <a href="https://github.com/jojayaro">
+            <i class="bi bi-github" style="font-size: 1.5rem"></i>
+          </a>
+          <a href="https://ca.linkedin.com/in/jayaro">
+            <i class="bi bi-linkedin" style="font-size: 1.5rem"></i>
+          </a>
+          <a href="https://www.flickr.com/photos/xchus">
+            <i class="bi bi-image" style="font-size: 1.5rem"></i>
+          </a>
+        </div>
+    </footer>
+
+</body>
+</html>
