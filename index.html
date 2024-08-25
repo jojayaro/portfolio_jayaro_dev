@@ -2,68 +2,34 @@
 <html>
 
 <head>
-  <title>Solar Wind Monitor</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="charting.js"></script>
-  <script src="cards.js"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCYV5QDN4X"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-LCYV5QDN4X');
-  </script>
+    <title>Solar Wind Monitor</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCYV5QDN4X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-LCYV5QDN4X");
+    </script>
+    <script src="scripts/header.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
+    <script src="scripts/charting.js"></script>
+    <script src="scripts/cards.js"></script>
 </head>
 
 <body class="flex flex-col min-h-screen">
+    <header-component></header-component>
 
-  <div class="navbar bg-base-300">
-    <div class="flex-1">
-      <a class="btn btn-ghost normal-case text-xl">Solar Wind Monitor</a>
-    </div>
-    <div class="flex-none">
-      <div class="dropdown dropdown-end">
-        <label tabindex="0" class="btn btn-ghost lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-          </svg>
-        </label>
-        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </div>
-      <ul class="menu menu-horizontal px-1 hidden lg:flex">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </div>
-  </div>
+    <div id="cardContainer" class="grid gap-5 py-7 my-7 px-5 md:grid-cols-2 lg:grid-cols-4 align-middle"></div>
 
-  <div id="cardContainer" class="grid gap-5 py-7 my-7 px-5 md:grid-cols-2 lg:grid-cols-4 align-middle"></div>
-
-  <footer class="footer items-center p-4 bg-neutral text-neutral-content bottom-0 mt-auto">
-    <div class="grid-flow-col pt-1 place-self-center">
-      <p style="font-size: 1.2rem;">Jesus Jayaro</p>
-    </div>
-    <div class="grid-flow-col gap-8 place-self-center">
-      <a href="https://github.com/jojayaro">
-        <i class="bi bi-github" style="font-size: 1.5rem"></i>
-      </a>
-      <a href="https://ca.linkedin.com/in/jayaro">
-        <i class="bi bi-linkedin" style="font-size: 1.5rem"></i>
-      </a>
-      <a href="https://www.flickr.com/photos/xchus">
-        <i class="bi bi-image" style="font-size: 1.5rem"></i>
-      </a>
-    </div>
-  </footer>
-
+    <footer-component class="mt-auto"></footer-component>
 </body>
 
 </html>
