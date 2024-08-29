@@ -1,35 +1,196 @@
 <!doctype html>
 <html>
+    <head>
+        <title>Jesus Jayaro</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-LCYV5QDN4X"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-LCYV5QDN4X");
+        </script>
+        <script src="scripts/header.js" defer></script>
+        <script src="scripts/footer.js" defer></script>
+        <script src="scripts/charting.js"></script>
+        <script src="scripts/cards.js"></script>
+    </head>
 
-<head>
-    <title>Solar Wind Monitor</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCYV5QDN4X"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-        gtag("config", "G-LCYV5QDN4X");
-    </script>
-    <script src="scripts/header.js" defer></script>
-    <script src="scripts/footer.js" defer></script>
-    <script src="scripts/charting.js"></script>
-    <script src="scripts/cards.js"></script>
-</head>
+    <body class="flex flex-col min-h-screen">
+        <header-component></header-component>
+        <div class="container mx-auto px-4 py-8">
+            <header class="text-center mb-12">
+                <h1 class="text-4xl font-bold mb-2">
+                    Jesus Jayaro: Data Engineer & Quality Specialist
+                </h1>
+                <h2 class="text-2xl text-primary">
+                    Transforming Industries Through Data-Driven Solutions
+                </h2>
+            </header>
 
-<body class="flex flex-col min-h-screen">
-    <header-component></header-component>
+            <main>
+                <section id="intro" class="mb-8">
+                    <p class="text-lg">
+                        Welcome to my professional portfolio. With a unique
+                        blend of engineering expertise and data engineering
+                        skills, I bring a wealth of experience from diverse
+                        industries to solve complex challenges.
+                    </p>
+                </section>
 
-    <div id="cardContainer" class="grid gap-5 py-7 my-7 px-5 md:grid-cols-2 lg:grid-cols-4 align-middle"></div>
+                <section id="offerings" class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-4">
+                        Key Capabilities:
+                    </h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>
+                            <strong>Data Engineering Excellence</strong>:
+                            Leveraging cutting-edge technologies to build robust
+                            data pipelines and analytics solutions.
+                        </li>
+                        <li>
+                            <strong>Quality Assurance Mastery</strong>:
+                            Implementing effective strategies for continuous
+                            improvement and incident management.
+                        </li>
+                        <li>
+                            <strong>Cross-Industry Insights</strong>: Applying
+                            knowledge from oil & gas, finance, manufacturing,
+                            and more to drive innovation.
+                        </li>
+                    </ul>
+                </section>
 
-    <footer-component class="mt-auto"></footer-component>
-</body>
+                <section id="why-choose-me" class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-4">
+                        Competitive Strengths:
+                    </h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>
+                            <span
+                                ><strong>Versatile Skill Set</strong>: From
+                                Azure and Synapse Analytics to Python and Rust,
+                                I command a wide array of tools and
+                                technologies.</span
+                            >
+                        </li>
+                        <li>
+                            <span
+                                ><strong>Global Perspective</strong>:
+                                International work experience spanning
+                                Venezuela, Oman, United States, and
+                                Canada.</span
+                            >
+                        </li>
+                        <li>
+                            <span
+                                ><strong>Problem Solver</strong>: Proven track
+                                record in root cause analysis and developing
+                                real-time reporting solutions.</span
+                            >
+                        </li>
+                    </ul>
+                </section>
 
+                <section id="featured-skills" class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-4">
+                        Featured Skills:
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge badge-outline"
+                            >Data Engineering & Analytics</span
+                        >
+                        <span class="badge badge-outline"
+                            >Cloud Computing (Azure)</span
+                        >
+                        <span class="badge badge-outline"
+                            >Quality Control & Assurance</span
+                        >
+                        <span class="badge badge-outline"
+                            >Business Intelligence</span
+                        >
+                        <span class="badge badge-outline"
+                            >Automation & Application Development</span
+                        >
+                        <span class="badge badge-outline"
+                            >Root Cause Analysis</span
+                        >
+                        <span class="badge badge-outline"
+                            >Incident Management</span
+                        >
+                    </div>
+                </section>
+
+                <section id="journey" class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-4">
+                        From Hurricane Chaser to Data Explorer
+                    </h3>
+                    <p>
+                        My journey began chasing hurricanes for research,
+                        evolved through the oil fields of Oman, Venezuela, and
+                        Canada, and now leads the charge in data-driven decision
+                        making for financial institutions. This unique path
+                        equips me with a rare blend of practical field
+                        experience and cutting-edge technical skills.
+                    </p>
+                </section>
+                <section id="hobbies" class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-4">
+                        Beyond the Professional Realm
+                    </h3>
+                    <p class="mb-4">
+                        My passion for data and technology extends into my
+                        personal life through a diverse array of hobbies:
+                    </p>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>
+                            <strong>Aurora and Storm Chasing</strong>: Combining
+                            my meteorological background with photography to
+                            capture nature's most spectacular phenomena.
+                        </li>
+                        <li>
+                            <strong>Photography</strong>: Documenting the
+                            world's beauty, from urban landscapes to remote
+                            wilderness.
+                        </li>
+                        <li>
+                            <strong>Mountain Biking</strong>: Exploring rugged
+                            terrains and pushing physical limits.
+                        </li>
+                        <li>
+                            <strong>Urban Farming</strong>: Bringing sustainable
+                            practices to city living and promoting food
+                            security.
+                        </li>
+                        <li>
+                            <strong>Geopolitics</strong>: Analyzing global
+                            trends and their impact on societies and economies.
+                        </li>
+                    </ul>
+                    <p class="mt-4">
+                        These pursuits not only enrich my personal life but also
+                        provide unique perspectives that inform my professional
+                        approach to problem-solving and innovation.
+                    </p>
+                </section>
+            </main>
+        </div>
+        <footer-component class="mt-auto w-full"></footer-component>
+    </body>
 </html>

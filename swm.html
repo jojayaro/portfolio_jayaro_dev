@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Solar Wind Monitor</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCYV5QDN4X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-LCYV5QDN4X");
+    </script>
+    <script src="scripts/header.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
+    <script src="scripts/charting.js"></script>
+    <script src="scripts/cards.js"></script>
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <header-component></header-component>
+
+    <div id="cardContainer" class="grid gap-5 py-7 my-7 px-5 md:grid-cols-2 lg:grid-cols-4 align-middle"></div>
+
+    <footer-component class="mt-auto"></footer-component>
+</body>
+
+</html>
