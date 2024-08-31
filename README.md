@@ -20,12 +20,13 @@ Welcome to my professional portfolio repository. This project showcases my journ
 
 ## 🛠 Technical Skills
 
-- Azure, Fabric, Synapse Analytics
-- Oracle, SQL Server, Python
-- Power BI, Tableau, Data Factory
-- Databricks, Rust, DuckDB
-- Power Platform, Dynamics, Docker
-- JavaScript, Plotly
+- Cloud Platforms: Azure
+- Databases: Oracle, SQL Server, DuckDB
+- Programming Languages: Python, Rust, JavaScript
+- Data Visualization: Power BI, Tableau, Plotly
+- ETL and Data Processing: Data Factory, Databricks, Fabric, Synapse Analytics, Databricks
+- Business Applications: Power Platform, Dynamics
+- Containerization: Docker
 
 ## 🌍 Global Experience
 
