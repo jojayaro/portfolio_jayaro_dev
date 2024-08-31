@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Aurora Monitor | Jesus Jayaro</title>
+    <meta name="description"
+        content="Aurora Monitor: A real-time solar wind data visualization tool built with Actix-web, HTMX, and Plotly." />
+    <meta name="keywords"
+        content="Aurora Monitor, Solar Wind, Data Visualization, Actix-web, HTMX, Plotly, Jesus Jayaro" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCYV5QDN4X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag("js", new Date());
+        gtag("config", "G-LCYV5QDN4X");
+    </script>
+    <script src="scripts/header.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
+</head>
+
+<body class="flex flex-col min-h-screen bg-base-200">
+    <header-component></header-component>
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-bold mb-4 text-primary">Aurora Monitor</h1>
+            <h2 class="text-3xl text-secondary">Real-time Solar Wind Data Visualization</h2>
+        </header>
+
+        <main class="bg-base-100 shadow-xl rounded-box p-8">
+            <section id="project-overview" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Project Overview</h3>
+                <p class="text-lg leading-relaxed">
+                    Aurora Monitor is a real-time solar wind data visualization tool built with Actix-web, HTMX, and Plotly. It provides an interactive web interface for monitoring space weather conditions that can lead to aurora events.
+                </p>
+            </section>
+
+            <section id="features" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Key Features</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Real-time solar wind data visualization</li>
+                    <li>Interactive plots for Bz, Bt, Density, Speed, and Temperature</li>
+                    <li>Customizable time ranges (2 hours, 24 hours, 7 days)</li>
+                    <li>Responsive design using Bootstrap</li>
+                    <li>Server-side rendering with Rust</li>
+                    <li>Client-side updates using HTMX</li>
+                </ul>
+            </section>
+
+            <section id="tech-stack" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Tech Stack</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Backend:</strong> Rust with Actix-web</li>
+                    <li><strong>Frontend:</strong> HTML, CSS (Bootstrap), JavaScript (Plotly.js)</li>
+                    <li><strong>Data Handling:</strong> Delta Lake, Apache Arrow</li>
+                    <li><strong>Interactivity:</strong> HTMX for seamless updates</li>
+                </ul>
+            </section>
+
+            <section id="github-link" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">GitHub Repository</h3>
+                <p>
+                    <a href="https://github.com/jojayaro/actix_htmx_plotly" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        View on GitHub
+                    </a>
+                </p>
+            </section>
+        </main>
+    </div>
+    <footer-component class="mt-auto w-full"></footer-component>
+</body>
+
+</html>

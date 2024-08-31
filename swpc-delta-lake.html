@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>SWPC to Delta Lake | Jesus Jayaro</title>
+    <meta name="description"
+        content="SWPC Solar Wind Data Ingestion to Delta Lake: A high-performance Data Engineering POC using Rust." />
+    <meta name="keywords"
+        content="SWPC, Delta Lake, Solar Wind, Data Engineering, Rust, Jesus Jayaro" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCYV5QDN4X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag("js", new Date());
+        gtag("config", "G-LCYV5QDN4X");
+    </script>
+    <script src="scripts/header.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
+</head>
+
+<body class="flex flex-col min-h-screen bg-base-200">
+    <header-component></header-component>
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-bold mb-4 text-primary">SWPC to Delta Lake</h1>
+            <h2 class="text-3xl text-secondary">High-Performance Solar Wind Data Ingestion</h2>
+        </header>
+
+        <main class="bg-base-100 shadow-xl rounded-box p-8">
+            <section id="project-overview" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Project Overview</h3>
+                <p class="text-lg leading-relaxed">
+                    This project demonstrates a high-performance Data Engineering Proof of Concept (POC) for ingesting real-time solar wind data from the Space Weather Prediction Center (SWPC) into Delta Lake using Rust. It showcases efficient handling of non-standard API payloads and frequent data updates.
+                </p>
+            </section>
+
+            <section id="features" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Key Features</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Real-time data ingestion with 1-minute update intervals</li>
+                    <li>Robust error handling with recovery mechanisms</li>
+                    <li>Delta Lake integration for reliable and efficient data storage</li>
+                    <li>High-performance processing using Rust</li>
+                    <li>Parallel processing with Rayon</li>
+                </ul>
+            </section>
+
+            <section id="tech-stack" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Tech Stack</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Language:</strong> Rust</li>
+                    <li><strong>Data Format:</strong> Delta Lake</li>
+                    <li><strong>Libraries:</strong> deltalake, tokio, reqwest, serde, rayon, chrono</li>
+                </ul>
+            </section>
+
+            <section id="github-link" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">GitHub Repository</h3>
+                <p>
+                    <a href="https://github.com/jojayaro/swpc_delta" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        View on GitHub
+                    </a>
+                </p>
+            </section>
+        </main>
+    </div>
+    <footer-component class="mt-auto w-full"></footer-component>
+</body>
+
+</html>
