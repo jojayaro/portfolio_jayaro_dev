@@ -51,7 +51,7 @@ My journey began with chasing hurricanes for research and evolved through the oi
 
 ## 🚀 Getting Started
 
-1. Clone this repository
+1. Clone this repository or visit [jayaro.dev](https://jayaro.dev)
 2. Open `index.html` in your browser to view the portfolio
 3. Navigate to `swm.html` to see the Solar Wind Monitor in action
 
@@ -64,10 +64,3 @@ The Solar Wind Monitor page (`swm.html`) uses DaisyUI, Plotly.js, and the SWPC A
 - [LinkedIn](https://ca.linkedin.com/in/jayaro)
 - [GitHub](https://github.com/jojayaro)
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-Built with 💻 by Jesus Jayaro
