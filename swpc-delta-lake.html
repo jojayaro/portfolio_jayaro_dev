@@ -2,11 +2,11 @@
 <html>
 
 <head>
-    <title>SWPC to Delta Lake | Jesus Jayaro</title>
+    <title>SWPC to Delta Lake - Reliable Data Lake Architecture | Jesus Jayaro</title>
     <meta name="description"
-        content="SWPC Solar Wind Data Ingestion to Delta Lake: A high-performance Data Engineering POC using Rust." />
+        content="SWPC Solar Wind Data Ingestion to Delta Lake: A POC demonstrating robust and scalable data lake architecture for real-time data using Rust and Delta Lake." />
     <meta name="keywords"
-        content="SWPC, Delta Lake, Solar Wind, Data Engineering, Rust, Jesus Jayaro" />
+        content="SWPC, Delta Lake, Solar Wind, Data Lake Architecture, Data Engineering, Rust, Real-Time Data, Jesus Jayaro" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.css" rel="stylesheet" type="text/css" />
@@ -29,30 +29,40 @@
     <div class="container mx-auto px-4 py-8">
         <header class="text-center mb-12">
             <h1 class="text-5xl font-bold mb-4 text-primary">SWPC to Delta Lake</h1>
-            <h2 class="text-3xl text-secondary">High-Performance Solar Wind Data Ingestion</h2>
+            <h2 class="text-3xl text-secondary">Architecting a Resilient Data Lake for Real-Time Solar Wind Ingestion</h2>
         </header>
 
         <main class="bg-base-100 shadow-xl rounded-box p-8">
             <section id="project-overview" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Project Overview</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Project Summary & Architectural Significance</h3>
+                <p class="text-lg leading-relaxed mb-2">
+                    This Proof of Concept (POC) showcases the design and implementation of a high-performance data pipeline for ingesting real-time solar wind data from the Space Weather Prediction Center (SWPC) directly into a Delta Lake. Built with Rust, it emphasizes reliability, data integrity, and efficient handling of streaming data.
+                </p>
                 <p class="text-lg leading-relaxed">
-                    This project demonstrates a high-performance Data Engineering Proof of Concept (POC) for ingesting real-time solar wind data from the Space Weather Prediction Center (SWPC) into Delta Lake using Rust. It showcases efficient handling of non-standard API payloads and frequent data updates.
+                    Architecturally, this project demonstrates a modern approach to building scalable data lakes. The choice of Delta Lake provides ACID transactions, schema enforcement, and time-travel capabilities over raw data files, crucial for ensuring data quality and enabling reliable analytics on high-velocity, frequently updated datasets. The use of Rust ensures efficient processing and resource utilization for the ingestion component.
                 </p>
             </section>
 
             <section id="features" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Key Features</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Key Architectural & Design Features</h3>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li>Real-time data ingestion with 1-minute update intervals</li>
-                    <li>Robust error handling with recovery mechanisms</li>
-                    <li>Delta Lake integration for reliable and efficient data storage</li>
-                    <li>High-performance processing using Rust</li>
-                    <li>Parallel processing with Rayon</li>
+                    <li><strong>Near Real-Time Ingestion:</strong> Designed for 1-minute update intervals, capturing timely solar wind data.</li>
+                    <li><strong>Delta Lake Integration:</strong> Leverages Delta Lake for robust, transactional storage, ensuring data consistency and enabling features like schema evolution and versioning.</li>
+                    <li><strong>Resilient Error Handling:</strong> Implements recovery mechanisms to manage API inconsistencies or transient network issues, critical for continuous operation.</li>
+                    <li><strong>High-Performance with Rust:</strong> Utilizes Rust's performance characteristics for efficient data fetching, parsing, and writing to Delta Lake.</li>
+                    <li><strong>Parallel Data Processing:</strong> Employs Rayon for parallelizing data transformation tasks, enhancing throughput for larger data volumes.</li>
                 </ul>
             </section>
 
+            <section id="architectural-notes" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Architectural Notes</h3>
+                <p class="text-lg leading-relaxed">
+                    The core architectural decision in this POC was the adoption of Delta Lake as the foundational storage layer. This addresses common challenges in traditional data lakes, such as data corruption and lack of transactional consistency, especially with streaming data. By combining Delta Lake with a high-performance ingestion service written in Rust, this project illustrates a best-practice pattern for building reliable and scalable real-time data platforms. This architecture is well-suited for scenarios requiring trustworthy data for immediate analytics, machine learning, or operational reporting.
+                </p>
+            </section>
+
             <section id="tech-stack" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Tech Stack</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Core Technologies</h3>
                 <ul class="list-disc pl-5 space-y-2">
                     <li><strong>Language:</strong> Rust</li>
                     <li><strong>Data Format:</strong> Delta Lake</li>

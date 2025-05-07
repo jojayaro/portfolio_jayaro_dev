@@ -2,11 +2,11 @@
 <html>
 
 <head>
-    <title>AER ST1 Parser | Jesus Jayaro</title>
+    <title>AER ST1 Parser - Data Architecture Project | Jesus Jayaro</title>
     <meta name="description"
-        content="ST1 Alberta Energy Regulator Parser: A high-performance Rust-based parser for AER ST1 data." />
+        content="AER ST1 Parser: A project demonstrating robust data ingestion and parsing, key for reliable data architecture. Built with Rust." />
     <meta name="keywords"
-        content="AER ST1, Alberta Energy Regulator, Data Parser, Rust, Jesus Jayaro" />
+        content="AER ST1, Data Ingestion, Data Parsing, Data Architecture, Rust, Alberta Energy Regulator, Jesus Jayaro" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.css" rel="stylesheet" type="text/css" />
@@ -29,30 +29,40 @@
     <div class="container mx-auto px-4 py-8">
         <header class="text-center mb-12">
             <h1 class="text-5xl font-bold mb-4 text-primary">AER ST1 Parser</h1>
-            <h2 class="text-3xl text-secondary">High-Performance Data Processing for Alberta Energy Regulator</h2>
+            <h2 class="text-3xl text-secondary">Designing Robust Ingestion for Complex Regulatory Data</h2>
         </header>
 
         <main class="bg-base-100 shadow-xl rounded-box p-8">
             <section id="project-overview" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Project Overview</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Project Summary & Architectural Significance</h3>
+                <p class="text-lg leading-relaxed mb-2">
+                    The AER ST1 Parser is a high-performance Rust application designed to ingest and process critical oil and gas exploration license data from the Alberta Energy Regulator (AER). This project highlights the architectural challenge of reliably handling non-standard, frequently updated external data sources, a common requirement in enterprise data ecosystems.
+                </p>
                 <p class="text-lg leading-relaxed">
-                    This high-performance Rust-based parser efficiently processes the Alberta Energy Regulator's ST1 data, which contains critical information on oil and gas exploration licenses. It showcases efficient handling of non-standard API payloads and frequent data updates.
+                    From a data architecture perspective, this parser demonstrates the design of a resilient ingestion component. Its ability to efficiently transform complex, domain-specific data into a structured, usable format is crucial for ensuring data quality and consistency for downstream analytics and reporting systems within the energy sector.
                 </p>
             </section>
 
             <section id="features" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Key Features</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Key Design Features & Capabilities</h3>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li>Asynchronous file downloading</li>
-                    <li>Robust parsing algorithm for extracting structured data</li>
-                    <li>CSV output generation for seamless integration with data processing pipelines</li>
-                    <li>Comprehensive error handling</li>
-                    <li>Memory-efficient processing of large datasets</li>
+                    <li><strong>Asynchronous Data Acquisition:</strong> Efficiently downloads data files without blocking, suitable for handling large volumes and frequent updates.</li>
+                    <li><strong>Robust Parsing Logic:</strong> Implements a sophisticated algorithm to accurately extract and structure data from AER's specific ST1 format, ensuring data integrity.</li>
+                    <li><strong>Standardized Output (CSV):</strong> Generates CSV files, facilitating seamless integration with diverse data processing pipelines and analytical tools.</li>
+                    <li><strong>Comprehensive Error Management:</strong> Includes robust error handling to manage inconsistencies in source data or connectivity issues, vital for operational stability.</li>
+                    <li><strong>Memory-Efficient Processing:</strong> Optimized for performance, capable of processing large datasets with minimal memory footprint, a key consideration for scalable data solutions.</li>
                 </ul>
+            </section>
+            
+            <section id="architectural-notes" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Architectural Notes</h3>
+                <p class="text-lg leading-relaxed">
+                    This project underscores the importance of meticulous design in the data ingestion layer of any data architecture. The choice of Rust was driven by its performance and memory safety features, ensuring the parser is both fast and reliable. The focus on robust error handling and standardized output formats reflects best practices in creating data pipelines that are resilient and easy to integrate into broader enterprise systems. Such components are fundamental for any organization relying on timely and accurate data from external regulatory bodies.
+                </p>
             </section>
 
             <section id="tech-stack" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Tech Stack</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Core Technologies</h3>
                 <ul class="list-disc pl-5 space-y-2">
                     <li><strong>Language:</strong> Rust</li>
                     <li><strong>Libraries:</strong> tokio, reqwest</li>

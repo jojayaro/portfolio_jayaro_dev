@@ -2,11 +2,11 @@
 <html>
 
 <head>
-    <title>SWPC to Postgres | Jesus Jayaro</title>
+    <title>SWPC to Postgres - Relational Data Ingestion | Jesus Jayaro</title>
     <meta name="description"
-        content="SWPC Solarwind to Postgres: A Proof of Concept pipeline for ingesting solar wind data into PostgreSQL." />
+        content="SWPC Solarwind to Postgres: A POC pipeline demonstrating data ingestion into a PostgreSQL relational database, focusing on schema design and data consistency." />
     <meta name="keywords"
-        content="SWPC, PostgreSQL, Solar Wind, Data Pipeline, Rust, Jesus Jayaro" />
+        content="SWPC, PostgreSQL, Solar Wind, Data Pipeline, Data Architecture, Rust, Jesus Jayaro" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.css" rel="stylesheet" type="text/css" />
@@ -29,30 +29,40 @@
     <div class="container mx-auto px-4 py-8">
         <header class="text-center mb-12">
             <h1 class="text-5xl font-bold mb-4 text-primary">SWPC to Postgres</h1>
-            <h2 class="text-3xl text-secondary">Solar Wind Data Ingestion Pipeline</h2>
+            <h2 class="text-3xl text-secondary">Architecting Data Ingestion for a Relational Database</h2>
         </header>
 
         <main class="bg-base-100 shadow-xl rounded-box p-8">
             <section id="project-overview" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Project Overview</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Project Summary & Architectural Significance</h3>
+                <p class="text-lg leading-relaxed mb-2">
+                    This Proof of Concept (POC) demonstrates a data ingestion pipeline that sources solar wind data from the Space Weather Prediction Center (SWPC) API and loads it into a PostgreSQL relational database. The pipeline is designed for periodic execution to maintain an updated data store suitable for structured querying and reporting.
+                </p>
                 <p class="text-lg leading-relaxed">
-                    This Proof of Concept (POC) pipeline demonstrates the ingestion of solar wind data from the SWPC (Space Weather Prediction Center) API into a PostgreSQL database. It's designed to run periodically to keep the database updated with the latest solar wind measurements.
+                    Architecturally, this project highlights the design considerations for populating a traditional relational data. Key aspects include schema design within PostgreSQL to appropriately model the incoming solar wind data, data transformation logic to ensure consistency, and efficient database loading techniques. It showcases a common pattern for integrating external data sources into an enterprise analytical environment.
                 </p>
             </section>
 
             <section id="features" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Key Features</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Key Architectural & Design Features</h3>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li>Fetches solar wind data from the SWPC API</li>
-                    <li>Processes and filters data based on timestamp</li>
-                    <li>Stores data in a PostgreSQL database</li>
-                    <li>Uses connection pooling for efficient database operations</li>
-                    <li>Parallel processing of data using Rayon</li>
+                    <li><strong>API Data Extraction:</strong> Efficiently fetches solar wind measurements from the SWPC API.</li>
+                    <li><strong>Structured Data Transformation:</strong> Processes and filters data based on timestamps and other criteria to ensure relevance and quality.</li>
+                    <li><strong>Relational Database Loading:</strong> Stores cleansed and structured data into a predefined PostgreSQL schema, optimized for analytical queries.</li>
+                    <li><strong>Efficient Database Connectivity:</strong> Utilizes connection pooling for optimized and resilient database operations, crucial for frequent updates.</li>
+                    <li><strong>Parallelized Processing:</strong> Leverages Rayon for parallel data processing, improving ingestion speed for larger datasets.</li>
                 </ul>
             </section>
 
+            <section id="architectural-notes" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Architectural Notes</h3>
+                <p class="text-lg leading-relaxed">
+                    The decision to use PostgreSQL in this POC reflects scenarios where a relational data model is preferred for its strong consistency, mature SQL interface, and suitability for structured reporting or BI tool integration. The pipeline design emphasizes data integrity through careful transformation and loading processes. Rust was chosen for the ingestion logic due to its performance and reliability. This project serves as an example of how to architect robust ETL/ELT processes for populating relational datas, a foundational component in many enterprise data strategies.
+                </p>
+            </section>
+
             <section id="tech-stack" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Tech Stack</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Core Technologies</h3>
                 <ul class="list-disc pl-5 space-y-2">
                     <li><strong>Language:</strong> Rust</li>
                     <li><strong>Database:</strong> PostgreSQL</li>

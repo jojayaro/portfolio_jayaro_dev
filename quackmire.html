@@ -1,14 +1,14 @@
 <!doctype html>
 <html data-theme="lofi">
     <head>
-        <title>Quackmire | Jesus Jayaro</title>
+        <title>Quackmire - Interactive Data Exploration Tool | Jesus Jayaro</title>
         <meta
             name="description"
-            content="Quackmire: An interactive DuckDB client built with Rust and ratatui, providing a terminal-based interface for SQL queries and data exploration."
+            content="Quackmire: A terminal-based DuckDB client for efficient data exploration and SQL querying. A tool demonstrating the importance of data accessibility in architecture."
         />
         <meta
             name="keywords"
-            content="Quackmire, DuckDB, SQL Client, Data Exploration, Rust, ratatui, Terminal UI, Jesus Jayaro"
+            content="Quackmire, DuckDB, SQL Client, Data Exploration, Data Architecture, Rust, ratatui, Terminal UI, Jesus Jayaro"
         />
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,21 +45,20 @@
             <header class="text-center mb-12">
                 <h1 class="text-5xl font-bold mb-4 text-primary">Quackmire</h1>
                 <h2 class="text-3xl text-secondary">
-                    Interactive DuckDB Client
+                    Facilitating Efficient Data Exploration for Architects & Analysts
                 </h2>
             </header>
 
             <main class="bg-base-100 shadow-xl rounded-box p-8">
                 <section id="project-overview" class="mb-8">
                     <h3 class="text-2xl font-semibold mb-4 text-primary">
-                        Project Overview
+                        Project Summary & Architectural Relevance
                     </h3>
+                    <p class="text-lg leading-relaxed mb-2">
+                        Quackmire is a terminal-based interactive client for DuckDB, an in-process analytical data management system. Built with Rust and the `ratatui` library, it provides an efficient interface for SQL querying and data file exploration directly from the command line.
+                    </p>
                     <p class="text-lg leading-relaxed">
-                        Quackmire is an interactive DuckDB client written in
-                        Rust using the ratatui library. It provides a
-                        terminal-based interface for executing SQL queries and
-                        exploring data files, offering a unique and efficient
-                        way to interact with DuckDB databases.
+                        From a data architecture standpoint, tools like Quackmire are invaluable for enabling rapid data discovery, validation, and ad-hoc analysis. The ability for architects, engineers, and analysts to quickly interact with data sources like DuckDB (often used for prototyping or handling local datasets) streamlines the design and troubleshooting process within a larger data ecosystem.
                     </p>
                 </section>
                 <section>
@@ -74,26 +73,34 @@
                 </section>
                 <section id="features" class="mb-8">
                     <h3 class="text-2xl font-semibold mb-4 text-primary">
-                        Key Features
+                        Key Design Features for Efficient Data Interaction
                     </h3>
                     <ul class="list-disc pl-5 space-y-2">
                         <li>
-                            File explorer for easy navigation of scripts and
-                            data files
+                            <strong>Integrated File Explorer:</strong> Allows seamless navigation of local scripts and data files (e.g., CSV, Parquet) directly within the TUI.
                         </li>
-                        <li>Multi-line query input area</li>
-                        <li>Results display in a customizable table format</li>
-                        <li>Error handling with pop-up notifications</li>
+                        <li><strong>Multi-Line SQL Editor:</strong> Provides a user-friendly input area for composing and executing complex SQL queries.
+                        </li>
+                        <li><strong>Tabular Results Display:</strong> Presents query results in a clear, customizable table format within the terminal.
+                        </li>
+                        <li><strong>Contextual Error Handling:</strong> Features pop-up notifications for SQL errors or operational issues, aiding quick debugging.
+                        </li>
                         <li>
-                            Intuitive key bindings for efficient navigation and
-                            operation
+                            <strong>Efficient TUI Navigation:</strong> Employs intuitive key bindings for rapid operation, optimized for keyboard-centric workflows.
                         </li>
                     </ul>
                 </section>
 
+                <section id="architectural-notes" class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary">Architectural Notes</h3>
+                    <p class="text-lg leading-relaxed">
+                        The development of Quackmire was driven by the need for a lightweight, fast, and keyboard-driven tool for interacting with DuckDB. In a data architecture context, empowering users with direct and efficient access to data sources is crucial for agility. Rust was chosen for its performance and ability to create native, dependency-light applications. The `ratatui` library enabled the creation of a rich terminal user interface, demonstrating that powerful data tools don't always require a web browser or heavy GUI. This project highlights the value of specialized tools that enhance productivity in data-intensive workflows.
+                    </p>
+                </section>
+
                 <section id="tech-stack" class="mb-8">
                     <h3 class="text-2xl font-semibold mb-4 text-primary">
-                        Tech Stack
+                        Core Technologies
                     </h3>
                     <ul class="list-disc pl-5 space-y-2">
                         <li><strong>Language:</strong> Rust</li>

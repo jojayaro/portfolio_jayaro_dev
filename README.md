@@ -1,8 +1,8 @@
-# Jesus Jayaro: Data Engineer & Quality Specialist Portfolio
+# Jesus Jayaro: Data Architect Portfolio
 
-## Transforming Industries Through Data-Driven Solutions
+## Architecting Scalable Data Ecosystems for Strategic Advantage
 
-Welcome to my professional portfolio repository. This project showcases my journey from a hurricane chaser to a data engineering expert, highlighting my unique blend of skills and experiences across various industries.
+Welcome to my professional portfolio repository. This project showcases my journey and expertise as a Data Architect, leveraging 5 years of data engineering experience and a strong background in quality assurance to design and implement strategic data solutions.
 
 ## 🌐 [Live Portfolio](https://jojayaro.github.io/gp_swm/)
 
@@ -12,29 +12,30 @@ Welcome to my professional portfolio repository. This project showcases my journ
 - **Comprehensive Professional Journey**: Detailed insights into my global career path and technical expertise.
 - **Responsive Design**: Optimized for various devices using Tailwind CSS and DaisyUI.
 
-## 💼 Professional Highlights
+## 💼 Architectural Highlights
 
-- **Data Engineering Excellence**: Building robust data pipelines and analytics solutions.
-- **Quality Assurance Mastery**: Implementing strategies for continuous improvement and incident management.
-- **Cross-Industry Insights**: Applying knowledge from oil & gas, finance, manufacturing, and more.
+- **Strategic Data Architecture & Design**: Crafting comprehensive data blueprints aligned with business objectives.
+- **Advanced Data Engineering & Pipeline Optimization**: Building and optimizing robust, efficient data pipelines.
+- **Data Governance & Quality Assurance by Design**: Ensuring data integrity, reliability, and compliance through design.
+- **Cross-Industry Solutioning**: Architecting innovative data solutions by applying diverse industry knowledge.
 
-## 🛠 Technical Skills
+## 🛠 Technical & Architectural Skills
 
-- Cloud Platforms: Azure
-- Databases: Oracle, SQL Server, DuckDB
-- Programming Languages: Python, Rust, JavaScript
-- Data Visualization: Power BI, Tableau, Plotly
-- ETL and Data Processing: Data Factory, Databricks, Fabric, Synapse Analytics, Databricks
-- Business Applications: Power Platform, Dynamics
-- Containerization: Docker
+- Cloud Platforms & Architecture: Azure (Synapse Analytics, Data Factory, Databricks, Fabric)
+- Data Modeling & Database Design: Oracle, SQL Server, DuckDB, Relational & NoSQL concepts
+- Programming Languages for Data Solutions: Python, Rust, JavaScript
+- Data Visualization & BI Architecture: Power BI, Tableau, Plotly
+- ETL/ELT Pipeline Design & Orchestration
+- Data Governance Frameworks
+- Containerization Strategy: Docker
 
 ## 🌍 Global Experience
 
 From Venezuela to Canada, with stops in Florida, Oman, and beyond, my international background provides a unique perspective on solving complex challenges.
 
-## 🔬 From Hurricane Chaser to Data Explorer
+## 🔬 From Hurricane Chaser to Data Architect
 
-My journey began with chasing hurricanes for research and evolved through the oil fields of Oman, Venezuela, and Canada. Now, I lead data-driven decision-making initiatives for financial institutions.
+My journey began with chasing hurricanes for research, evolved through global experiences in engineering and quality assurance, and now focuses on architecting data-driven solutions. This unique path provides a holistic and adaptable approach to designing robust data ecosystems.
 
 ## 🌟 Beyond the Professional Realm
 
@@ -64,4 +65,3 @@ The Solar Wind Monitor page (`swm.html`) uses DaisyUI, Plotly.js, and the SWPC A
 
 - [LinkedIn](https://ca.linkedin.com/in/jayaro)
 - [GitHub](https://github.com/jojayaro)
-

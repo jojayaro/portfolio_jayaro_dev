@@ -2,11 +2,11 @@
 <html>
 
 <head>
-    <title>Aurora Monitor | Jesus Jayaro</title>
+    <title>Aurora Monitor - Real-Time Data Architecture | Jesus Jayaro</title>
     <meta name="description"
-        content="Aurora Monitor: A real-time solar wind data visualization tool built with Actix-web, HTMX, and Plotly." />
+        content="Aurora Monitor: A project showcasing end-to-end real-time data architecture, from ingestion (Actix-web) to storage (Delta Lake) and visualization (HTMX, Plotly)." />
     <meta name="keywords"
-        content="Aurora Monitor, Solar Wind, Data Visualization, Actix-web, HTMX, Plotly, Jesus Jayaro" />
+        content="Aurora Monitor, Real-Time Data Architecture, Solar Wind, Data Visualization, Actix-web, HTMX, Plotly, Delta Lake, Rust, Jesus Jayaro" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.css" rel="stylesheet" type="text/css" />
@@ -29,31 +29,41 @@
     <div class="container mx-auto px-4 py-8">
         <header class="text-center mb-12">
             <h1 class="text-5xl font-bold mb-4 text-primary">Aurora Monitor</h1>
-            <h2 class="text-3xl text-secondary">Real-time Solar Wind Data Visualization</h2>
+            <h2 class="text-3xl text-secondary">Architecting an End-to-End Real-Time Data Visualization System</h2>
         </header>
 
         <main class="bg-base-100 shadow-xl rounded-box p-8">
             <section id="project-overview" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Project Overview</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Project Summary & Architectural Significance</h3>
+                <p class="text-lg leading-relaxed mb-2">
+                    The Aurora Monitor is a full-stack application demonstrating an end-to-end real-time data architecture. It ingests solar wind data, processes it, stores it efficiently, and presents it through an interactive web interface for monitoring space weather conditions conducive to aurora events.
+                </p>
                 <p class="text-lg leading-relaxed">
-                    Aurora Monitor is a real-time solar wind data visualization tool built with Actix-web, HTMX, and Plotly. It provides an interactive web interface for monitoring space weather conditions that can lead to aurora events.
+                    This project showcases key architectural considerations for streaming data systems: low-latency data acquisition (via SWPC API), robust backend processing (Actix-web in Rust), scalable and reliable data storage (Delta Lake with Apache Arrow), and responsive front-end visualization (Plotly.js with HTMX for dynamic updates). It exemplifies how different technologies can be orchestrated to deliver timely insights from continuously flowing data.
                 </p>
             </section>
 
             <section id="features" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Key Features</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Key Architectural & Design Features</h3>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li>Real-time solar wind data visualization</li>
-                    <li>Interactive plots for Bz, Bt, Density, Speed, and Temperature</li>
-                    <li>Customizable time ranges (2 hours, 24 hours, 7 days)</li>
-                    <li>Responsive design using Bootstrap</li>
-                    <li>Server-side rendering with Rust</li>
-                    <li>Client-side updates using HTMX</li>
+                    <li><strong>Real-Time Data Ingestion & Processing:</strong> Leverages Rust with Actix-web for a high-performance backend capable of handling continuous data streams.</li>
+                    <li><strong>Scalable Time-Series Data Storage:</strong> Utilizes Delta Lake with Apache Arrow for efficient storage and querying of time-series solar wind data, ensuring reliability and performance.</li>
+                    <li><strong>Interactive Data Visualization:</strong> Employs Plotly.js to render dynamic charts (Bz, Bt, Density, Speed, Temperature) for intuitive data exploration.</li>
+                    <li><strong>Efficient Client-Side Updates:</strong> Integrates HTMX for partial page updates, providing a responsive user experience without full page reloads.</li>
+                    <li><strong>Customizable Data Views:</strong> Allows users to select different time ranges (2 hours, 24 hours, 7 days) for tailored analysis.</li>
+                    <li><strong>Responsive Web Design:</strong> Ensures accessibility and optimal viewing across various devices.</li>
                 </ul>
             </section>
 
+            <section id="architectural-notes" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Architectural Notes</h3>
+                <p class="text-lg leading-relaxed">
+                    The architecture of the Aurora Monitor emphasizes a decoupled design, where data ingestion, storage, and presentation layers are distinct yet integrated. The choice of Rust for the backend ensures high throughput and low resource consumption. Delta Lake was selected for its ACID transactions and time-travel capabilities, crucial for maintaining data integrity in a streaming environment. HTMX demonstrates a modern approach to building interactive web applications by minimizing JavaScript complexity while maximizing server-side logic. This project serves as a practical example of designing a complete data pipeline for real-time analytics and visualization.
+                </p>
+            </section>
+
             <section id="tech-stack" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Tech Stack</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Core Technologies</h3>
                 <ul class="list-disc pl-5 space-y-2">
                     <li><strong>Backend:</strong> Rust with Actix-web</li>
                     <li><strong>Frontend:</strong> HTML, CSS (Bootstrap), JavaScript (Plotly.js)</li>
