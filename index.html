@@ -1,394 +1,332 @@
 <!doctype html>
-<html data-theme="lofi">
+<html>
+
 <head>
     <title>Jesus Jayaro | Senior Data Engineer | Portfolio</title>
-    <meta name="description"
-        content="Jesus Jayaro - Senior Data Engineer specializing in business-focused data solutions. 15+ years bridging operations and technology across oil & gas, finance, and manufacturing. Proven ROI: 75% performance gains, 20-30% cost reductions." />
+    <meta name="description" content="Senior Data Engineer focused on reliable, efficient, end to end data platforms: cost optimization, faster pipelines, observability, Rust prototypes, and business aligned outcomes." />
     <meta name="keywords"
-        content="Jesus Jayaro, Senior Data Engineer, Data Engineering, Business Intelligence, Azure, Python, ETL, Data Warehouse Optimization, Cross-Industry Analytics" />
+        content="Jesus Jayaro, Senior Data Engineer, Data Engineering, Business Intelligence, Operations Analytics, Cross-Industry Data Solutions, Azure, Python, Rust, International Experience, Digital Transformation" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.css" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root { --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        body { font-family: var(--font-sans); }
+        .metric-number { font-feature-settings: 'tnum' 1; }
+    </style>
     <script src="scripts/tailwind.config.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCYV5QDN4X"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag("js", new Date());
         gtag("config", "G-LCYV5QDN4X");
     </script>
     <script src="scripts/header.js" defer></script>
     <script src="scripts/footer.js" defer></script>
+    <script src="scripts/charting.js"></script>
+    <script src="scripts/cards.js"></script>
 </head>
+<html data-theme="lofi"></html>
 
-<body class="flex flex-col min-h-screen bg-base-200 font-mono">
+<body class="flex flex-col min-h-screen bg-base-200">
     <header-component></header-component>
-    
     <div class="container mx-auto px-4 py-8">
-        <!-- Hero Section -->
-        <header class="text-center mb-8">
-            <h1 class="text-5xl font-bold mb-2 text-primary">Jesus Jayaro, BSc</h1>
-            <p class="text-3xl text-secondary mb-4">Senior Data Engineer</p>
-            <p class="text-xl mb-6">Calgary, AB | Open to Remote | Bilingual (English/Spanish)</p>
-            
-            <!-- Contact CTAs -->
-            <div class="flex justify-center gap-4 mb-6">
-                <a href="mailto:jayaro@gmail.com" class="btn btn-primary">
-                    <i class="bi bi-envelope-fill mr-2"></i>Email Me
-                </a>
-                <a href="https://www.linkedin.com/in/jayaro/" target="_blank" class="btn btn-outline btn-secondary">
-                    <i class="bi bi-linkedin mr-2"></i>LinkedIn
-                </a>
-                <a href="https://github.com/jojayaro" target="_blank" class="btn btn-outline">
-                    <i class="bi bi-github mr-2"></i>GitHub
-                </a>
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-extrabold mb-4 text-primary tracking-tight">
+                Jesus Jayaro
+            </h1>
+            <p class="text-xl md:text-2xl text-secondary font-medium mb-6">Senior Data Engineer | Reliability and Data Strategy</p>
+            <p class="max-w-3xl mx-auto text-lg md:text-xl leading-relaxed text-base-content/80">
+                I build dependable, cost aware data platforms and end to end pipelines. Background across operations, quality, and engineering gives me a bias for clarity, root cause thinking, and measurable outcomes. Recently focusing on low abstraction Rust prototypes that explore performance, observability, and simplicity while staying production minded.
+            </p>
+            <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto" aria-label="Key impact metrics">
+                <div class="p-4 rounded-box bg-base-100 shadow-sm">
+                    <div class="text-3xl font-bold metric-number text-primary">30%+</div>
+                    <div class="text-sm uppercase tracking-wide text-base-content/70">Power BI Capacity Reduction</div>
+                </div>
+                <div class="p-4 rounded-box bg-base-100 shadow-sm">
+                    <div class="text-3xl font-bold metric-number text-primary">75%</div>
+                    <div class="text-sm uppercase tracking-wide text-base-content/70">ETL Duration Improvement</div>
+                </div>
+                <div class="p-4 rounded-box bg-base-100 shadow-sm">
+                    <div class="text-3xl font-bold metric-number text-primary">20%+</div>
+                    <div class="text-sm uppercase tracking-wide text-base-content/70">Warehouse DWU Savings</div>
+                </div>
+                <div class="p-4 rounded-box bg-base-100 shadow-sm">
+                    <div class="text-3xl font-bold metric-number text-primary">0.2%</div>
+                    <div class="text-sm uppercase tracking-wide text-base-content/70">Lowest Regional NPT</div>
+                </div>
             </div>
         </header>
 
-        <main class="bg-base-100 shadow-xl rounded-box p-8 mb-6">
-            <!-- Executive Summary -->
-            <section class="mb-10 pb-8 border-b border-base-300">
-                <h2 class="text-2xl font-semibold mb-4 text-primary">Reliability & Data Strategist</h2>
+        <main class="bg-base-100 shadow-xl rounded-box p-8">
+            <section id="intro" class="mb-8">
                 <p class="text-lg leading-relaxed mb-4">
-                    Senior Data Engineer who bridges business operations and technical execution. I build data solutions that drive measurable ROI—not just process data. With 18+ years across oil & gas (Schlumberger, TechnipFMC, Nabors), finance, and manufacturing in the US, Canada, Oman, and Venezuela, I understand both the technical stack and the operational impact.
+                    Welcome to my professional portfolio. What started as chasing hurricanes for research has evolved into a passionate pursuit of bridging the critical gap between business operations and cutting-edge data solutions. As a Senior Data Engineer with over 15 years of cross-industry experience—from hurricane research labs to oil rigs in Oman and Venezuela, to financial institutions in North America—I bring a unique perspective that combines deep operational understanding with innovative technical execution.
                 </p>
-                <div class="stats stats-vertical lg:stats-horizontal shadow w-full mt-6">
-                    <div class="stat">
-                        <div class="stat-title">Performance Gains</div>
-                        <div class="stat-value text-primary">75%</div>
-                        <div class="stat-desc">ETL optimization</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-title">Cost Reduction</div>
-                        <div class="stat-value text-secondary">30%</div>
-                        <div class="stat-desc">Power BI & Synapse efficiency</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-title">Global Experience</div>
-                        <div class="stat-value text-accent">4</div>
-                        <div class="stat-desc">Countries operated</div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Core Value Propositions -->
-            <section class="mb-10 pb-8 border-b border-base-300">
-                <h2 class="text-2xl font-semibold mb-6 text-primary">Why I'm Different</h2>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="card bg-base-200">
-                        <div class="card-body">
-                            <h3 class="card-title text-secondary">Operations Background</h3>
-                            <p>Most data engineers understand the technical side. I've worked on oil rigs with Schlumberger's Integrated Project Management, managed quality for major OFS companies, and led field operations across continents. I understand what data matters for business decisions and deliver solutions that work in real operational environments.</p>
-                        </div>
-                    </div>
-                    <div class="card bg-base-200">
-                        <div class="card-body">
-                            <h3 class="card-title text-secondary">Proven Business Impact</h3>
-                            <p>Led TechnipFMC region to lowest non-productive time in the Americas (0.2% of sales). Reduced warehouse costs by 20-30%, accelerated ETL by 75%, and eliminated incident reporting silos through automated solutions. I focus on solving business problems, not just implementing technology.</p>
-                        </div>
-                    </div>
-                    <div class="card bg-base-200">
-                        <div class="card-body">
-                            <h3 class="card-title text-secondary">Cross-Industry Expertise</h3>
-                            <p>From hurricane research at University of Florida to offshore jack-up rigs in Venezuela and heavy-duty land rigs in Oman, through to financial services digital transformation. I quickly adapt to new contexts and understand diverse operational requirements.</p>
-                        </div>
-                    </div>
-                    <div class="card bg-base-200">
-                        <div class="card-body">
-                            <h3 class="card-title text-secondary">Digital Transformation Leader</h3>
-                            <p>While delivering with enterprise-proven technologies (Azure, Fabric, Databricks, Power Platform), I explore emerging solutions through POC projects. Implemented Center of Excellence for Power Platform and led multiple automation initiatives breaking down organizational silos.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Technical Skills -->
-            <section class="mb-10 pb-8 border-b border-base-300">
-                <h2 class="text-2xl font-semibold mb-6 text-primary">Technical Expertise</h2>
-                
-                <div class="mb-6">
-                    <h3 class="text-lg font-semibold mb-3 text-secondary">Core Data Engineering</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="badge badge-lg badge-primary">Python</span>
-                        <span class="badge badge-lg badge-primary">SQL</span>
-                        <span class="badge badge-lg badge-primary">Azure Data Platform</span>
-                        <span class="badge badge-lg badge-primary">Microsoft Fabric</span>
-                        <span class="badge badge-lg badge-primary">Databricks</span>
-                        <span class="badge badge-lg badge-primary">ETL/ELT Pipelines</span>
-                        <span class="badge badge-lg badge-primary">Data Warehousing</span>
-                    </div>
-                </div>
-
-                <div class="mb-6">
-                    <h3 class="text-lg font-semibold mb-3 text-secondary">Cloud & Tools</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="badge badge-lg badge-secondary">Azure Synapse</span>
-                        <span class="badge badge-lg badge-secondary">Azure Data Factory</span>
-                        <span class="badge badge-lg badge-secondary">Power Platform</span>
-                        <span class="badge badge-lg badge-secondary">Power BI</span>
-                        <span class="badge badge-lg badge-secondary">Dynamics 365</span>
-                        <span class="badge badge-lg badge-secondary">Docker</span>
-                        <span class="badge badge-lg badge-secondary">Terraform</span>
-                        <span class="badge badge-lg badge-secondary">Plotly Dash</span>
-                    </div>
-                </div>
-
-                <div class="mb-6">
-                    <h3 class="text-lg font-semibold mb-3 text-secondary">Quality & Operations</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="badge badge-lg badge-accent">Root Cause Analysis (TapRoot)</span>
-                        <span class="badge badge-lg badge-accent">Incident Management</span>
-                        <span class="badge badge-lg badge-accent">ISO 9001 Auditor</span>
-                        <span class="badge badge-lg badge-accent">Lean Six Sigma</span>
-                        <span class="badge badge-lg badge-accent">Site Reliability Engineering</span>
-                        <span class="badge badge-lg badge-accent">Business Process Optimization</span>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 class="text-lg font-semibold mb-3 text-secondary">Emerging Technologies (POC Experience)</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="badge badge-lg badge-outline">Rust</span>
-                        <span class="badge badge-lg badge-outline">Delta Lake</span>
-                        <span class="badge badge-lg badge-outline">DuckDB</span>
-                        <span class="badge badge-lg badge-outline">Real-Time Streaming</span>
-                        <span class="badge badge-lg badge-outline">Computer Vision</span>
-                        <span class="badge badge-lg badge-outline">Reinforcement Learning</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Experience Summary -->
-            <section class="mb-10 pb-8 border-b border-base-300">
-                <h2 class="text-2xl font-semibold mb-6 text-primary">Professional Experience</h2>
-                
-                <div class="mb-6">
-                    <h3 class="text-xl font-semibold text-secondary">Senior Data Engineer</h3>
-                    <p class="text-base-content/70 mb-2">Innovation Federal Credit Union | Remote | Oct 2022 - Present</p>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>Develop end-to-end pipelines automating business processes using Azure and Power Platform</li>
-                        <li>Lead optimization initiatives: migrated on-prem SQL Server to Synapse, SSIS to ADF, Synapse to Fabric</li>
-                        <li>Reduced Power BI capacity usage by 30%, Synapse DWU by 20%, ETL time by 75% through parallelization</li>
-                        <li>Refactoring warehouse based on in-house OSFI model to achieve 25% reduction in ETL time</li>
-                        <li>Site reliability engineering including observability setup for all DataOps</li>
-                    </ul>
-                </div>
-
-                <div class="mb-6">
-                    <h3 class="text-xl font-semibold text-secondary">Data Engineer</h3>
-                    <p class="text-base-content/70 mb-2">Finning (CAT Equipment) | Remote | Mar 2022 - Oct 2022</p>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>Developed end-to-end pipelines automating business processes on Azure stack</li>
-                        <li>Implemented real-time telemetry data ingestion from equipment APIs</li>
-                        <li>Site reliability engineering for data engineering team operations</li>
-                    </ul>
-                </div>
-
-                <div class="mb-6">
-                    <h3 class="text-xl font-semibold text-secondary">Power Platform Developer</h3>
-                    <p class="text-base-content/70 mb-2">Innovation Credit Union | Remote | Mar 2021 - Feb 2022</p>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>Implemented Center of Excellence and ALM Accelerator for Advanced Makers</li>
-                        <li>Developed team metrics dashboards and monitoring solutions in Power BI</li>
-                        <li>Created automation solutions for organizational processes</li>
-                    </ul>
-                </div>
-
-                <div class="mb-6">
-                    <h3 class="text-xl font-semibold text-secondary">Quality Specialist</h3>
-                    <p class="text-base-content/70 mb-2">TechnipFMC | Calgary, Canada | Aug 2018 - Dec 2019</p>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>Designed and deployed Power Platform solution for field incident reporting, breaking down silos and enabling real-time collaboration</li>
-                        <li>Spearheaded Robotic Process Automation project automating data entry across databases</li>
-                        <li><strong>Led region to achieve lowest non-productive time (NPT) in the Americas: 0.2% of Sales</strong></li>
-                    </ul>
-                </div>
-
-                <div class="mb-6">
-                    <h3 class="text-xl font-semibold text-secondary">Quality Specialist</h3>
-                    <p class="text-base-content/70 mb-2">Nabors Industries (Tesco Corporation) | Calgary, Canada | Oct 2014 - Aug 2018</p>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>Led global incident investigations, root cause analyses, and warranty claims for all new products</li>
-                        <li>Automated data ETL unifying disparate data sources for effective root cause analysis</li>
-                        <li>Performed market research identifying new technologies and downstream impacts on product lines</li>
-                    </ul>
-                </div>
-
-                <div class="mb-6">
-                    <h3 class="text-xl font-semibold text-secondary">Field Engineer / Service Quality Champion</h3>
-                    <p class="text-base-content/70 mb-2">Schlumberger - Integrated Project Management | Oman & Venezuela | Jul 2007 - Nov 2010</p>
-                    <ul class="list-disc pl-5 space-y-1">
-                        <li>Managed integrated drilling operations on heavy-duty land rigs (Oman) and offshore jack-up rigs (Venezuela)</li>
-                        <li>Led serious incident investigations and participated in dry docks, UWILD, and major maintenance operations</li>
-                        <li>Coordinated rig moves and quality assurance across international operations</li>
-                    </ul>
-                </div>
-
-                <div class="alert alert-info">
-                    <i class="bi bi-info-circle-fill"></i>
-                    <span><strong>Started in hurricane research</strong> at University of Florida (2005-2006), chasing storms Dennis, Katrina, and Wilma—where data-driven decision making under pressure became my foundation</span>
-                </div>
-            </section>
-
-            <!-- Certifications -->
-            <section class="mb-10 pb-8 border-b border-base-300">
-                <h2 class="text-2xl font-semibold mb-6 text-primary">Certifications & Training</h2>
-                
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <h3 class="text-lg font-semibold mb-3 text-secondary">Data & Technology</h3>
-                        <ul class="list-disc pl-5 space-y-1 text-sm">
-                            <li>Microsoft Fabric Data Engineer Associate</li>
-                            <li>IBM Data Science Professional Certificate</li>
-                            <li>Data Analytics for Lean Six Sigma (Univ. of Amsterdam)</li>
-                            <li>Elements of AI (University of Helsinki)</li>
-                            <li>Intro to Game AI and Reinforcement Learning (Kaggle)</li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <h3 class="text-lg font-semibold mb-3 text-secondary">Quality & Operations</h3>
-                        <ul class="list-disc pl-5 space-y-1 text-sm">
-                            <li>TapRoot Incident Investigation & Root Cause Analysis</li>
-                            <li>ISO 9001:2015 Internal Auditor (SAI Global)</li>
-                            <li>LEAN for Managers (Schlumberger)</li>
-                            <li>Service Quality Management (Schlumberger)</li>
-                            <li>Preventive Well Control (Schlumberger)</li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <h3 class="text-lg font-semibold mb-3 text-secondary">Leadership</h3>
-                        <ul class="list-disc pl-5 space-y-1 text-sm">
-                            <li>Indigenous Canada (University of Alberta)</li>
-                            <li>Energy Transition (IFP School)</li>
-                            <li>Situational Leadership (Tesco Corporation)</li>
-                            <li>Advanced Negotiation Skills (Tesco Corporation)</li>
-                            <li>Managing and Leading People (Schlumberger)</li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <h3 class="text-lg font-semibold mb-3 text-secondary">Oilfield Services</h3>
-                        <ul class="list-disc pl-5 space-y-1 text-sm">
-                            <li>Stuck Pipe Prevention (Schlumberger)</li>
-                            <li>Drilling and Production Technology (Schlumberger)</li>
-                            <li>Applied Project Management (Schlumberger)</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Projects Section -->
-            <section class="mb-10 pb-8 border-b border-base-300">
-                <h2 class="text-2xl font-semibold mb-4 text-primary">Innovation Through POC Projects</h2>
-                <p class="mb-6 text-base-content/80">
-                    While delivering production results with proven technologies, I explore emerging solutions to stay ahead of industry trends. These proof-of-concept projects demonstrate end-to-end data engineering capabilities with next-generation tools.
+                <p class="text-lg leading-relaxed">
+                    Throughout my journey, I've maintained an unwavering focus on delivering measurable value and ROI while staying ahead of the technological curve. Whether it's reducing non-productive time in oil operations, optimizing data warehouse performance by 75%, or exploring next-generation solutions through proof-of-concept projects, my approach has always been about finding the most reliable, efficient path to business success while preparing for what's next.
                 </p>
-                
-                <div class="grid md:grid-cols-2 gap-4">
-                    <a href="aurora-monitor.html" class="card bg-base-200 hover:shadow-lg transition-shadow">
+            </section>
+
+            <section id="featured-projects" class="mb-12" aria-labelledby="projects-heading">
+                <div class="flex items-baseline justify-between flex-wrap gap-4 mb-4">
+                    <h2 id="projects-heading" class="text-2xl font-semibold text-primary">Featured Projects (Rust End to End)</h2>
+                    <p class="text-sm text-base-content/70 max-w-xl">A curated set of proof of concept builds showing a complete data lifecycle: ingest, store, serve, visualize. Emphasis on low abstraction, predictable performance, and operational reliability.</p>
+                </div>
+                <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                    <article class="card bg-base-100 shadow-md border border-base-200">
                         <div class="card-body">
-                            <h3 class="card-title text-secondary text-base">Real-Time Monitoring Dashboard</h3>
-                            <p class="text-sm">Complete pipeline from data ingestion to interactive visualization, demonstrating modern lakehouse architecture with responsive UI.</p>
-                            <div class="card-actions justify-end">
-                                <span class="badge badge-outline badge-sm">Rust</span>
-                                <span class="badge badge-outline badge-sm">Delta Lake</span>
-                                <span class="badge badge-outline badge-sm">HTMX</span>
-                            </div>
+                            <h3 class="card-title text-lg">TUI DuckDB Client</h3>
+                            <p class="text-sm leading-relaxed">Terminal interface for rapid local analytics. Fast iteration loop leveraging DuckDB vectorized execution. Focus: discovery speed and minimal overhead.</p>
+                            <ul class="text-xs space-y-1 mt-2">
+                                <li><strong>Stage:</strong> Exploration & Profiling</li>
+                                <li><strong>Stack:</strong> Rust, Crossterm, DuckDB</li>
+                                <li><strong>Value:</strong> Cuts early data understanding time.</li>
+                            </ul>
                         </div>
-                    </a>
-                    
-                    <a href="swpc-delta-lake.html" class="card bg-base-200 hover:shadow-lg transition-shadow">
+                    </article>
+                    <article class="card bg-base-100 shadow-md border border-base-200">
                         <div class="card-body">
-                            <h3 class="card-title text-secondary text-base">High-Performance Data Ingestion</h3>
-                            <p class="text-sm">Real-time streaming data pipeline with transactional storage, showcasing reliable high-throughput processing.</p>
-                            <div class="card-actions justify-end">
-                                <span class="badge badge-outline badge-sm">Rust</span>
-                                <span class="badge badge-outline badge-sm">Streaming</span>
-                            </div>
+                            <h3 class="card-title text-lg">API to Delta Lake Pipeline</h3>
+                            <p class="text-sm leading-relaxed">High reliability ingestion pulling external API payloads into Delta tables with idempotent writes and simple observability hooks.</p>
+                            <ul class="text-xs space-y-1 mt-2">
+                                <li><strong>Stage:</strong> Ingestion</li>
+                                <li><strong>Stack:</strong> Rust, Reqwest, Delta Kernel</li>
+                                <li><strong>Value:</strong> Deterministic loads, retry safe.</li>
+                            </ul>
                         </div>
-                    </a>
-                    
-                    <a href="quackmire.html" class="card bg-base-200 hover:shadow-lg transition-shadow">
+                    </article>
+                    <article class="card bg-base-100 shadow-md border border-base-200">
                         <div class="card-body">
-                            <h3 class="card-title text-secondary text-base">Data Exploration Tool</h3>
-                            <p class="text-sm">Terminal-based SQL client for rapid data discovery and analysis, optimizing the exploration workflow.</p>
-                            <div class="card-actions justify-end">
-                                <span class="badge badge-outline badge-sm">Rust</span>
-                                <span class="badge badge-outline badge-sm">DuckDB</span>
-                            </div>
+                            <h3 class="card-title text-lg">Delta Lake to Plotly (htmx)</h3>
+                            <p class="text-sm leading-relaxed">Lightweight actix-web service streaming query slices into interactive Plotly visuals via htmx partials. No heavy SPA layer.</p>
+                            <ul class="text-xs space-y-1 mt-2">
+                                <li><strong>Stage:</strong> Serving & Visualization</li>
+                                <li><strong>Stack:</strong> Rust, actix-web, htmx, Plotly</li>
+                                <li><strong>Value:</strong> Low latency insights footprint.</li>
+                            </ul>
                         </div>
-                    </a>
-                    
-                    <a href="aer-st1-parser.html" class="card bg-base-200 hover:shadow-lg transition-shadow">
+                    </article>
+                    <article class="card bg-base-100 shadow-md border border-base-200">
                         <div class="card-body">
-                            <h3 class="card-title text-secondary text-base">Regulatory Data Parser</h3>
-                            <p class="text-sm">Automated processing for complex compliance data formats, dramatically improving processing speed and accuracy.</p>
-                            <div class="card-actions justify-end">
-                                <span class="badge badge-outline badge-sm">Rust</span>
-                                <span class="badge badge-outline badge-sm">Compliance</span>
-                            </div>
+                            <h3 class="card-title text-lg">API to Postgres Loader</h3>
+                            <p class="text-sm leading-relaxed">Thin ingestion layer pushing normalized records into Postgres with back pressure handling and simple metrics.</p>
+                            <ul class="text-xs space-y-1 mt-2">
+                                <li><strong>Stage:</strong> Structured Persistence</li>
+                                <li><strong>Stack:</strong> Rust, tokio-postgres</li>
+                                <li><strong>Value:</strong> Stable baseline store.</li>
+                            </ul>
                         </div>
-                    </a>
+                    </article>
+                    <article class="card bg-base-100 shadow-md border border-base-200">
+                        <div class="card-body">
+                            <h3 class="card-title text-lg">Text Parser to CSV + Delta</h3>
+                            <p class="text-sm leading-relaxed">Robust parsing of irregular text exports into clean columnar outputs (CSV + Delta) with validation and schema drift detection.</p>
+                            <ul class="text-xs space-y-1 mt-2">
+                                <li><strong>Stage:</strong> Normalization</li>
+                                <li><strong>Stack:</strong> Rust, nom, Delta</li>
+                                <li><strong>Value:</strong> Reliable legacy unlock.</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card bg-base-100 shadow-md border border-dashed border-base-300">
+                        <div class="card-body">
+                            <h3 class="card-title text-lg">Observability Hooks (WIP)</h3>
+                            <p class="text-sm leading-relaxed">Unified lightweight telemetry pattern (timings, row counts, outcomes) across pipelines for early drift signals.</p>
+                            <ul class="text-xs space-y-1 mt-2">
+                                <li><strong>Stage:</strong> Reliability Layer</li>
+                                <li><strong>Stack:</strong> Rust, tracing</li>
+                                <li><strong>Value:</strong> Faster incident isolation.</li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
             </section>
 
-            <!-- Education -->
-            <section class="mb-10 pb-8 border-b border-base-300">
-                <h2 class="text-2xl font-semibold mb-4 text-primary">Education</h2>
-                <div class="mb-4">
-                    <h3 class="text-lg font-semibold text-secondary">Bachelor of Science in Mechanical Engineering</h3>
-                    <p class="text-base-content/70">University of Florida | Gainesville, USA | December 2005</p>
-                    <p class="text-sm text-base-content/60">Specialization: Instrumentation and Measurements</p>
+            <section id="offerings" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">
+                    What I Bring to Your Data Engineering Team:
+                </h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="text-primary mr-2">&#8226;</span>
+                        <span><strong class="text-secondary">Business-First Data Engineering</strong>: I don't just build pipelines—I craft data solutions that directly impact your bottom line. My operational background means I understand what data really matters for business decisions and how to deliver it reliably.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-primary mr-2">&#8226;</span>
+                        <span><strong class="text-secondary">Proven ROI & Performance Optimization</strong>: Track record of reducing warehouse costs by 20-30%, accelerating ETL processes by 75%, and eliminating non-productive time through data-driven insights across oil & gas, finance, and manufacturing sectors.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-primary mr-2">&#8226;</span>
+                        <span><strong class="text-secondary">Future-Ready Innovation Mindset</strong>: I don't wait for technologies to become mainstream—I actively explore and prototype emerging solutions to keep your organization ahead of the curve, always with a focus on reliability and business value.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-primary mr-2">&#8226;</span>
+                        <span><strong class="text-secondary">Global Operations Experience</strong>: Having worked across four countries and multiple industries, I bring adaptability and a deep understanding of how different operational contexts require tailored data approaches.</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="future-ready-projects" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">
+                    Staying Ahead: Next-Generation Data Engineering Exploration
+                </h3>
+                <p class="text-lg leading-relaxed mb-4">
+                    While delivering results with proven enterprise technologies, I continuously explore emerging solutions to ensure your organization stays competitive. My recent proof-of-concept projects demonstrate complete end-to-end data engineering capabilities using next-generation tooling, focusing on performance, reliability, and maintainability.
+                </p>
+                <p class="text-lg leading-relaxed mb-4">
+                    These explorations aren't just technical exercises—they're strategic investigations into how modern systems-level programming can address real business challenges: faster data processing, lower infrastructure costs, more reliable operations, and simplified maintenance.
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <span class="text-primary mr-2">&#8226;</span>
+                        <span><strong class="text-secondary">High-Performance Data Ingestion</strong>: Prototype pipelines that ingest real-time data streams into both modern lakehouse formats and traditional databases, demonstrating how to balance cutting-edge storage with operational reliability.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-primary mr-2">&#8226;</span>
+                        <span><strong class="text-secondary">Interactive Real-Time Dashboards</strong>: Proof-of-concept monitoring systems that deliver responsive, real-time data visualization without the overhead of traditional web frameworks—showing potential for significant cost and performance improvements.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-primary mr-2">&#8226;</span>
+                        <span><strong class="text-secondary">Command-Line Data Exploration Tools</strong>: Efficient interfaces for rapid data discovery and analysis, demonstrating how modern tooling can accelerate the data exploration phase that's critical for business insights.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-primary mr-2">&#8226;</span>
+                        <span><strong class="text-secondary">Regulatory Data Processing</strong>: Robust parsers for complex, non-standard data formats that maintain compliance requirements while dramatically improving processing speed and reliability.</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="why-choose-me" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">
+                    The Unique Value I Bring:
+                </h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>
+                        <span><strong class="text-secondary">Operations-to-Engineering Bridge</strong>: Most data engineers understand the technical side; I understand both the technical implementation and the operational impact. This means I build solutions that actually work in real business environments and deliver measurable results.</span>
+                    </li>
+                    <li>
+                        <span><strong class="text-secondary">Proven ROI Focus</strong>: My background in quality assurance and root cause analysis translates directly into data solutions that prevent problems, reduce costs, and maximize business value. I don't just process data—I optimize business outcomes.</span>
+                    </li>
+                    <li>
+                        <span><strong class="text-secondary">Innovation with Reliability</strong>: I explore tomorrow's solutions today, but always with a practical eye toward what can be reliably deployed and maintained in production environments. Future-ready, but business-practical.</span>
+                    </li>
+                    <li>
+                        <span><strong class="text-secondary">Global Adaptability</strong>: Having operated across four countries and multiple industries, I quickly adapt to new contexts, regulations, and business cultures—essential for today's distributed and diverse business environment.</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="featured-skills" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">
+                    Core Competencies & Technical Skills:
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="badge badge-primary badge-outline">Data Platforms (Azure Fabric)</span>
+                    <span class="badge badge-secondary badge-outline">Pipeline Design (ETL/ELT)</span>
+                    <span class="badge badge-accent badge-outline">Performance & Cost Tuning</span>
+                    <span class="badge badge-primary badge-outline">Rust Prototyping</span>
+                    <span class="badge badge-secondary badge-outline">Observability & Reliability</span>
+                    <span class="badge badge-accent badge-outline">Delta / DuckDB / Postgres</span>
+                    <span class="badge badge-primary badge-outline">Python & SQL</span>
+                    <span class="badge badge-secondary badge-outline">Root Cause Analysis</span>
+                    <span class="badge badge-accent badge-outline">Data Quality & Governance</span>
+                    <span class="badge badge-primary badge-outline">Incident Reduction</span>
                 </div>
             </section>
 
-            <!-- Personal Interests -->
-            <section>
-                <h2 class="text-2xl font-semibold mb-4 text-primary">Beyond the Code</h2>
-                <p class="mb-4">My diverse interests inform my problem-solving approach and keep me curious:</p>
-                <div class="flex flex-wrap gap-3">
-                    <span class="badge badge-lg">Aurora & Storm Chasing</span>
-                    <span class="badge badge-lg">Photography</span>
-                    <span class="badge badge-lg">Mountain Biking</span>
-                    <span class="badge badge-lg">Urban Farming</span>
-                    <span class="badge badge-lg">Geopolitics</span>
+            <section id="journey" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Path to Senior Data Engineering</h3>
+                <div class="space-y-4 text-base leading-relaxed">
+                    <div>
+                        <strong class="text-secondary">Research</strong>: Hurricane field data collection taught me disciplined measurement and that data only matters when it drives action.
+                    </div>
+                    <div>
+                        <strong class="text-secondary">Operations</strong>: Oil and gas field deployments across Oman, Venezuela, and Canada sharpened my focus on reliability, safety, and reducing non productive time.
+                    </div>
+                    <div>
+                        <strong class="text-secondary">Quality & Automation</strong>: Built incident reporting, RPA, and analytics loops that closed gaps between events, root cause, and prevention.
+                    </div>
+                    <div>
+                        <strong class="text-secondary">Platform Engineering</strong>: Transition into financial services brought large scale governance, performance tuning, and cost optimization.
+                    </div>
+                    <div>
+                        <strong class="text-secondary">Exploration</strong>: Rust prototypes now extend the toolset: lean ingestion, deterministic storage, efficient serving, and fast feedback.
+                    </div>
+                    <p class="pt-2">Common thread: shorten time from raw signal to trusted decision with minimal complexity and measurable improvement.</p>
                 </div>
+            </section>
+            <section id="engineering-approach" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Engineering Approach</h3>
+                <ul class="space-y-3 text-base leading-relaxed">
+                    <li><strong class="text-secondary">Low Abstraction First</strong>: Prefer simple, explicit code paths that ease debugging and reduce hidden costs.</li>
+                    <li><strong class="text-secondary">Determinism</strong>: Idempotent ingestion and schema aware transforms for predictable recovery and repeatability.</li>
+                    <li><strong class="text-secondary">Observability Built In</strong>: Timers, counts, and outcome signals embedded early rather than bolted on.</li>
+                    <li><strong class="text-secondary">Cost Awareness</strong>: Track resource usage and align optimization to business value, not benchmarks alone.</li>
+                    <li><strong class="text-secondary">Incremental Delivery</strong>: Ship thin vertical slices (ingest to insight) to validate value before scaling.</li>
+                    <li><strong class="text-secondary">Resilience Over Cleverness</strong>: Favor clear fallbacks and safe retries to reduce incident time to isolation.</li>
+                </ul>
+            </section>
+            <section id="hobbies" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">
+                    <strong class="text-secondary">Beyond the Professional Realm</strong>
+                </h3>
+                <p class="mb-4">Outside work I pursue signal rich experiences that sharpen pattern recognition and patience.</p>
+                <ul class="list-disc pl-5 space-y-1 text-base">
+                    <li><strong class="text-secondary">Aurora / Storm Chasing</strong>: Field planning, data monitoring, rapid decision cycles.</li>
+                    <li><strong class="text-secondary">Photography</strong>: Framing, timing, iteration.</li>
+                    <li><strong class="text-secondary">Mountain Biking</strong>: Line choice and continuous feedback loops.</li>
+                    <li><strong class="text-secondary">Urban Farming</strong>: Controlled variables and incremental optimization.</li>
+                    <li><strong class="text-secondary">Geopolitics Reading</strong>: Macro pattern synthesis.</li>
+                </ul>
+                <p class="mt-4">These reinforce the same instincts I use in engineering: observe, hypothesize, act, refine.</p>
             </section>
         </main>
-
-        <!-- Clear CTA Section -->
-        <div class="text-center bg-primary text-primary-content rounded-box p-8 shadow-xl">
-            <h2 class="text-3xl font-bold mb-4">Let's Build Something Together</h2>
-            <p class="text-lg mb-6">Ready to discuss how I can help your team deliver measurable data engineering results?</p>
-            <div class="flex justify-center gap-4">
-                <a href="mailto:jayaro@gmail.com" class="btn btn-secondary btn-lg">
-                    <i class="bi bi-envelope-fill mr-2"></i>Get in Touch
-                </a>
-                <a href="about.html" class="btn btn-outline btn-lg">
-                    <i class="bi bi-person-fill mr-2"></i>Read My Full Story
-                </a>
-            </div>
-        </div>
     </div>
-
     <footer-component class="mt-auto w-full"></footer-component>
 </body>
-</html>
 
+</html>
 <script type="application/ld+json">
-{
-    "@context": "https://schema.org/",
-    "@type": "Person",
-    "name": "Jesus Jayaro",
-    "jobTitle": "Senior Data Engineer",
-    "url": "https://jayaro.dev",
-    "sameAs": [
-        "https://www.linkedin.com/in/jayaro/",
-        "https://github.com/jojayaro"
-    ]
-}
+    {
+        "@context": "https://schema.org/",
+        "@type": "Person",
+        "name": "Jesus Jayaro",
+        "jobTitle": "Senior Data Engineer",
+        "url": "https://jayaro.dev",
+        "sameAs": [
+            "https://ca.linkedin.com/in/jayaro",
+            "https://github.com/jojayaro"
+        ],
+        "knowsAbout": [
+            "Data Engineering",
+            "Rust",
+            "Azure Fabric",
+            "ETL Pipelines",
+            "Delta Lake",
+            "Observability",
+            "Cost Optimization",
+            "Performance Tuning",
+            "DuckDB",
+            "PostgreSQL"
+        ],
+        "skills": [
+            "Rust",
+            "Python",
+            "SQL",
+            "Data Modeling",
+            "Pipeline Optimization",
+            "Root Cause Analysis",
+            "Incident Reduction"
+        ]
+    }
 </script>
