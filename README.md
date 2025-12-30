@@ -1,26 +1,26 @@
 # Jesus Jayaro: Senior Data Engineer Portfolio
 
-## Bridging Business Operations & Next-Generation Data Solutions
+## Senior Data Engineer | 18+ Years Operations to Technology
 
-Welcome to my professional portfolio. What started as chasing hurricanes for research has evolved into a passionate pursuit of bridging the critical gap between business operations and cutting-edge data solutions. As a Senior Data Engineer with over 15 years of cross-industry experience—from hurricane research labs to oil rigs in Oman and Venezuela, to financial institutions in North America—I bring a unique perspective that combines deep operational understanding with innovative technical execution.
+18+ years bridging operations and data engineering across oil & gas, finance, and manufacturing globally. I design data solutions that deliver measurable ROI. Currently building AI agents and exploring modern data platforms.
 
-My journey has been driven by an unwavering focus on delivering measurable value and ROI while staying ahead of the technological curve. Whether reducing non-productive time in oil operations, optimizing data warehouse performance by 75%, or exploring next-generation solutions through proof-of-concept projects, my approach has always been about finding the most reliable, efficient path to business success while preparing for what's next.
+**Track Record**: 75% ETL acceleration, 20-30% cost reduction, 15-minute incident response (from days).
 
 ## [Live Portfolio](https://jayaro.dev)
 
 ## What I Bring to Data Engineering Teams
 
-- **Business-First Data Engineering**: I don't just build pipelines—I craft data solutions that directly impact your bottom line, understanding what data really matters for business decisions.
-- **Proven ROI & Performance Optimization**: Track record of reducing warehouse costs by 20-30%, accelerating ETL processes by 75%, and eliminating non-productive time through data-driven insights.
-- **Future-Ready Innovation Mindset**: I actively explore and prototype emerging solutions to keep organizations ahead of the curve, always with a focus on reliability and business value.
-- **Global Operations Experience**: Having worked across four countries and multiple industries, I bring adaptability and deep understanding of diverse operational contexts.
+- **Business-Focused Solutions**: Build pipelines that impact the bottom line. Understand what metrics actually matter for decisions.
+- **Performance Optimization**: 75% ETL acceleration, 20-30% cost reduction, incident response from days to minutes.
+- **Cloud & Modern Platforms**: Azure Synapse, Fabric, Data Factory. Databricks. Hands-on with emerging tools.
+- **Global Operations Background**: Oil & gas, finance, manufacturing across four countries. Understand real operational constraints.
 
-## Key Portfolio Features
+## Portfolio Overview
 
-- Interactive Solar Wind Monitor demonstrating real-time data architecture
-- Comprehensive professional journey from hurricane research to senior data engineering
-- Responsive design showcasing technical and business acumen
-- Future-ready proof-of-concept projects exploring next-generation data engineering
+- Real-time data architecture examples (Aurora Monitor)
+- Enterprise project walk-throughs (optimization, migrations, automation)
+- Open source tools in Rust (Quackmire, AER ST1 Parser)
+- Proof-of-concept projects with modern data platforms
 
 ## Professional Experience & Impact
 
@@ -47,19 +47,15 @@ My journey has been driven by an unwavering focus on delivering measurable value
 - Spearheaded RPA projects to automate data entry across multiple databases
 - Automated data ETL to unify sources and provide effective root cause analyses
 
-## Future-Ready Exploration: Next-Generation Data Engineering Projects
+## Open Source & Proof-of-Concept Projects
 
-While delivering results with proven enterprise technologies, I continuously explore emerging solutions to ensure organizations stay competitive. These proof-of-concept projects demonstrate complete end-to-end data engineering capabilities using next-generation tooling:
+Building tools and exploring modern data platforms:
 
-**Aurora Monitor**: Real-time data architecture demonstrating high-performance ingestion, modern lakehouse storage, and responsive visualization without traditional web framework overhead.
-
-**SWPC to Delta Lake**: Streaming data ingestion pipeline showcasing ACID transactions, schema evolution, and reliable real-time processing for time-series data.
-
-**SWPC to PostgreSQL**: Structured data loading demonstrating hybrid storage strategies balancing modern lakehouse formats with traditional relational databases.
-
-**Quackmire**: Terminal-based data exploration interface demonstrating efficient data discovery tools that accelerate the analysis phase critical for business insights.
-
-**AER ST1 Parser**: Regulatory data processing system handling complex, non-standard formats while maintaining compliance requirements and dramatically improving processing speed.
+- **Aurora Monitor**: Real-time dashboard with Delta Lake backend. High-performance ingestion, responsive UI (Rust, Actix, HTMX, Plotly).
+- **SWPC to Delta Lake**: Streaming pipeline with ACID transactions and schema evolution for time-series data.
+- **SWPC to PostgreSQL**: Hybrid approach combining modern ingestion with traditional relational databases.
+- **Quackmire**: Terminal SQL client for rapid data exploration (Rust, DuckDB, ratatui).
+- **AER ST1 Parser**: Regulatory data processor handling complex formats and compliance requirements (Rust).
 
 ## Core Technical Competencies
 
@@ -71,27 +67,15 @@ While delivering results with proven enterprise technologies, I continuously exp
 **DevOps & Reliability**: Docker, Site Reliability Engineering, Performance Optimization
 **Next-Gen Exploration**: Modern systems programming, lakehouse architectures, terminal interfaces
 
-## The Journey: From Hurricane Research to Senior Data Engineering
+## Background
 
-My path began in an unexpected place: chasing hurricanes for the University of Florida's research program, where I learned that data collection is only valuable when it drives actionable insights. This foundation became the cornerstone of everything that followed.
+Started in hurricane research at University of Florida, learning that data only matters when it drives decisions. Moved through oil & gas operations in Oman and Venezuela, then quality & manufacturing in Canada. Each role reinforced the same lesson: operational understanding matters as much as technical skill.
 
-Moving from research to oil fields across Oman, Venezuela, and Canada, I discovered my true passion: bridging the gap between business operations and technology solutions. Whether eliminating non-productive time on drilling rigs, automating incident reporting, or optimizing quality processes, I consistently found ways to leverage data and automation to deliver measurable business value.
+Transition to IT was natural—I'd seen inefficiencies and problems that data and automation could solve. Now I combine that operational perspective with modern data engineering to build systems that work in practice.
 
-My transition to Information Technology wasn't just a career change—it was the natural evolution of my drive to strengthen digital transformation capabilities and provide better bridges between business needs and technical solutions. Today, as a Senior Data Engineer, I combine this unique operational perspective with cutting-edge data engineering practices to deliver solutions that work both technically and practically.
+## Interests & Hobbies
 
-## Beyond the Professional Realm
-
-## Beyond the Professional Realm
-
-My passion for data and technology extends into my personal life through diverse pursuits:
-
-- **Aurora and Storm Chasing**: Combining meteorological background with photography to capture nature's most spectacular phenomena
-- **Photography**: Documenting the world's beauty, from urban landscapes to remote wilderness  
-- **Mountain Biking**: Exploring rugged terrains and pushing physical limits
-- **Urban Farming**: Bringing sustainable practices to city living and promoting food security
-- **Geopolitics**: Analyzing global trends and their impact on societies and economies
-
-These pursuits not only enrich my personal life but also provide unique perspectives that inform my professional approach to problem-solving and innovation.
+Aurora chasing, storm chasing, photography, mountain biking, urban farming.
 
 ## Project Structure & Getting Started
 
@@ -109,10 +93,9 @@ These pursuits not only enrich my personal life but also provide unique perspect
 2. Or clone this repository and open `index.html` in your browser
 3. Navigate through the project pages to see different aspects of data engineering capabilities
 
-## Connect & Collaborate
+## Get in Touch
 
-I'm actively seeking opportunities to bring this unique combination of operational experience and technical innovation to forward-thinking data engineering teams. Whether you're looking to optimize existing data operations, explore next-generation solutions, or bridge the gap between business needs and technical implementation, I'd welcome the opportunity to discuss how my background can drive measurable value for your organization.
-
+- **Email**: jayaro@gmail.com
 - **LinkedIn**: [linkedin.com/in/jayaro](https://ca.linkedin.com/in/jayaro)
 - **GitHub**: [github.com/jojayaro](https://github.com/jojayaro)  
 - **Portfolio**: [jayaro.dev](https://jayaro.dev)
