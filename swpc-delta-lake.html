@@ -29,44 +29,41 @@
     <div class="container mx-auto px-4 py-8">
         <header class="text-center mb-12">
             <h1 class="text-5xl font-bold mb-4 text-primary">SWPC to Delta Lake</h1>
-            <h2 class="text-3xl text-secondary">Exploring Modern Lakehouse Architecture for Business-Critical Streaming</h2>
+             <h2 class="text-3xl text-secondary">Real-Time Streaming Pipeline with Transactional Guarantees</h2>
         </header>
 
         <main class="bg-base-100 shadow-xl rounded-box p-8">
             <section id="project-overview" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Strategic Exploration: Modern Lakehouse for Enterprise Streaming</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Proof of Concept: Modern Lakehouse Streaming</h3>
                 <p class="text-lg leading-relaxed mb-4">
-                    This proof-of-concept represents a strategic investigation into how modern lakehouse architectures can address fundamental challenges in enterprise streaming data scenarios: ensuring data quality, maintaining operational reliability, and reducing total cost of ownership while handling high-velocity, business-critical data flows.
+                    High-performance ingestion pipeline feeding Delta Lake, combining transactional guarantees with streaming scalability. Demonstrates how modern lakehouse architecture handles high-velocity data while ensuring reliability.
                 </p>
                 <p class="text-lg leading-relaxed mb-4">
-                    Using real-time solar wind data as a representative streaming workload, this exploration demonstrates the practical business value of combining transactional storage (Delta Lake) with high-performance ingestion systems. The key insight: traditional data lake approaches often sacrifice either reliability or performance, but modern lakehouse architecture can deliver both.
+                    Key insight: traditional data lakes sacrifice reliability for performance, or vice versa. Delta Lake provides both. ACID transactions prevent data corruption, while high-performance ingestion handles volume efficiently.
                 </p>
                 <p class="text-lg leading-relaxed">
-                    While this specific implementation processes space weather data, the architectural patterns and performance characteristics directly translate to enterprise scenarios: IoT sensor streams, financial market data, operational telemetry, or any use case where data quality issues can have immediate business impact and downtime costs are significant.
+                    Applicable to IoT sensors, financial market data, operational telemetry, or any use case where data corruption or downtime has immediate business cost.
                 </p>
             </section>
 
             <section id="features" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Business Value & Technical Benefits Demonstrated</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Key Benefits</h3>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li><strong>Operational Reliability:</strong> ACID transactions eliminate data corruption risks that can cascade into business-critical reporting failures—demonstrating potential for significant risk reduction in production environments.</li>
-                    <li><strong>Cost-Effective Performance:</strong> High-performance ingestion with minimal resource overhead, showing potential for substantial infrastructure cost savings compared to traditional streaming architectures.</li>
-                    <li><strong>Business Continuity:</strong> Resilient error handling and recovery mechanisms ensure continuous operation despite API inconsistencies or network issues—reducing operational overhead and manual intervention.</li>
-                    <li><strong>Audit & Compliance Ready:</strong> Time-travel capabilities and schema enforcement provide built-in audit trails and data governance features that often require complex additional infrastructure.</li>
-                    <li><strong>Future-Proof Scalability:</strong> Modern lakehouse architecture supports both real-time analytics and historical analysis from the same storage layer, reducing architectural complexity and maintenance costs.</li>
+                    <li><strong>ACID Guarantees:</strong> Transactions prevent data corruption that cascades into reporting failures</li>
+                    <li><strong>Cost-Efficient Performance:</strong> High-throughput ingestion with minimal resource overhead</li>
+                    <li><strong>Resilience:</strong> Error handling and automatic recovery despite API inconsistencies or network issues</li>
+                    <li><strong>Audit-Ready:</strong> Time-travel capabilities and schema enforcement provide built-in compliance features</li>
+                    <li><strong>Unified Analytics:</strong> Real-time and historical analysis from the same storage, reducing architectural complexity</li>
                 </ul>
             </section>
 
             <section id="architectural-notes" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Why This Approach Delivers Business Value</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Technical Approach</h3>
                 <p class="text-lg leading-relaxed mb-4">
-                    This exploration validates a critical business hypothesis: that modern lakehouse architectures can simultaneously reduce operational risk and infrastructure costs while improving data accessibility. Traditional approaches often force organizations to choose between real-time performance and data reliability—this POC demonstrates you can have both.
-                </p>
-                <p class="text-lg leading-relaxed mb-4">
-                    The combination of Delta Lake's transactional guarantees with high-performance ingestion addresses two of the most expensive problems in enterprise data operations: data corruption incidents (which can cost weeks of remediation work) and infrastructure over-provisioning to handle performance bottlenecks.
+                    Delta Lake's transactional guarantees combined with high-performance async ingestion solves two critical problems: preventing data corruption incidents (weeks of remediation) and eliminating infrastructure over-provisioning for performance bottlenecks.
                 </p>
                 <p class="text-lg leading-relaxed">
-                    Most importantly, this pattern is designed for operational simplicity. While the technology is advanced, the deployment and maintenance characteristics are actually simpler than traditional streaming architectures—meaning reduced operational overhead and more predictable total cost of ownership as systems scale.
+                    Deployment and maintenance are actually simpler than traditional streaming architectures. Reduced operational overhead and more predictable total cost of ownership as systems scale.
                 </p>
             </section>
 

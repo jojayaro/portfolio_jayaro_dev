@@ -29,45 +29,42 @@
     <div class="container mx-auto px-4 py-8">
         <header class="text-center mb-12">
             <h1 class="text-5xl font-bold mb-4 text-primary">Aurora Monitor</h1>
-            <h2 class="text-3xl text-secondary">Exploring Next-Generation Real-Time Data Engineering</h2>
+             <h2 class="text-3xl text-secondary">Real-Time Data Pipeline & Dashboard in Rust</h2>
         </header>
 
         <main class="bg-base-100 shadow-xl rounded-box p-8">
             <section id="project-overview" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Proof-of-Concept: Future-Ready Real-Time Data Engineering</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Proof of Concept: Real-Time Analytics Platform</h3>
                 <p class="text-lg leading-relaxed mb-4">
-                    The Aurora Monitor represents a strategic exploration into next-generation real-time data engineering capabilities. This proof-of-concept demonstrates how emerging technologies can address common business challenges: faster processing, lower infrastructure costs, more reliable operations, and simplified maintenance—all while maintaining the responsiveness that modern users expect.
+                    A complete end-to-end real-time data system: high-performance ingestion, reliable storage (Delta Lake), and responsive web dashboard. Demonstrates how modern systems-level programming can build production-grade data platforms efficiently.
                 </p>
                 <p class="text-lg leading-relaxed mb-4">
-                    Built as a complete end-to-end system for monitoring space weather conditions, this project showcases the potential business value of modern systems-level programming applied to data engineering challenges. From high-performance data ingestion through reliable storage to responsive user interfaces, every component was chosen to demonstrate practical improvements over traditional approaches.
+                    Uses space weather data as the example domain. Architecture applies directly to operational monitoring, IoT analytics, financial data streaming, or any real-time analytics use case.
                 </p>
                 <p class="text-lg leading-relaxed">
-                    While this specific implementation focuses on solar wind data, the architectural principles and performance characteristics translate directly to enterprise scenarios: real-time monitoring dashboards, operational metrics systems, and any use case where data freshness and system reliability directly impact business outcomes.
+                    Key insight: building fast, reliable systems doesn't require complex infrastructure. This project shows how thoughtful architectural choices reduce both operational overhead and total cost of ownership.
                 </p>
             </section>
 
             <section id="features" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Key Business & Technical Benefits Demonstrated</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Technical Highlights</h3>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li><strong>High-Performance Data Processing:</strong> Demonstrates potential for significant cost savings through efficient resource utilization—processing more data with less infrastructure compared to traditional approaches.</li>
-                    <li><strong>Reliable Real-Time Operations:</strong> Shows how modern lakehouse architecture can provide both real-time access and historical reliability, crucial for business-critical monitoring systems.</li>
-                    <li><strong>Responsive User Experience:</strong> Illustrates how to deliver dynamic, interactive dashboards without the complexity and overhead of traditional web frameworks—potentially reducing development and maintenance costs.</li>
-                    <li><strong>Simplified Architecture:</strong> Demonstrates end-to-end data flow with fewer moving parts, reducing operational complexity and potential points of failure.</li>
-                    <li><strong>Flexible Time-Range Analysis:</strong> Showcases user-centric design allowing customizable views (2 hours to 7 days) that adapt to different business analysis needs.</li>
-                    <li><strong>Production-Ready Design Patterns:</strong> Implements patterns that scale from proof-of-concept to enterprise deployment, ensuring investment in exploration translates to business value.</li>
+                    <li><strong>Efficient Ingestion:</strong> Async I/O and parallelization for high-throughput data collection</li>
+                    <li><strong>Reliable Storage:</strong> Delta Lake provides ACID guarantees and time-travel queries for audit compliance</li>
+                    <li><strong>Responsive Dashboard:</strong> HTMX + Plotly for interactive visualization without SPA complexity</li>
+                    <li><strong>Simple Architecture:</strong> End-to-end flow with minimal moving parts, reducing operational overhead</li>
+                    <li><strong>Flexible Analysis:</strong> User-selectable time ranges (2 hours to 7 days) for different analysis needs</li>
+                    <li><strong>Production-Ready Patterns:</strong> Scales from POC to enterprise deployment</li>
                 </ul>
             </section>
 
             <section id="architectural-notes" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Why This Approach Matters for Business</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Technical Approach</h3>
                 <p class="text-lg leading-relaxed mb-4">
-                    This proof-of-concept isn't just about exploring new technologies—it's about validating approaches that can deliver tangible business value. The architectural choices demonstrate how modern systems-level programming can address real operational challenges that organizations face every day.
-                </p>
-                <p class="text-lg leading-relaxed mb-4">
-                    The decoupled design ensures that each component can be optimized independently, which translates to more predictable performance and easier maintenance in production environments. The choice of modern lakehouse architecture provides both the real-time responsiveness that business users need and the data reliability that compliance and audit functions require.
+                    Decoupled architecture allows independent optimization of each component. Real-time ingestion runs separately from storage and API layers, improving reliability and maintainability.
                 </p>
                 <p class="text-lg leading-relaxed">
-                    Most importantly, this project demonstrates how to balance innovation with practicality. While the technology stack is cutting-edge, the implementation patterns are business-proven. This approach ensures that investments in next-generation technology exploration translate directly to competitive advantages in production systems.
+                    Modern lakehouse architecture provides both real-time responsiveness for business users and historical reliability for compliance and audit. Demonstrates how thoughtful system design reduces both operational complexity and total cost of ownership.
                 </p>
             </section>
 

@@ -10,7 +10,6 @@ class Header extends HTMLElement {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.text();
-      console.log("Header content loaded:", data); // Debugging log
       this.innerHTML = data;
     } catch (error) {
       console.error("Error loading header:", error);
