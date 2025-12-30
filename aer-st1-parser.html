@@ -1,12 +1,11 @@
 <!doctype html>
-<html>
+<html lang="en" data-theme="lofi">
 
 <head>
-    <title>AER ST1 Parser - Regulatory Data Processing POC | Jesus Jayaro</title>
+    <title>AER ST1 Parser - Regulatory Data Processing | Jesus Jayaro</title>
     <meta name="description"
-        content="AER ST1 Parser: A proof-of-concept demonstrating high-performance regulatory data processing, showcasing how modern approaches can dramatically improve compliance workflows and operational efficiency." />
-    <meta name="keywords"
-        content="AER ST1, Data Ingestion, Data Parsing, Data Architecture, Rust, Alberta Energy Regulator, Jesus Jayaro" />
+        content="AER ST1 Parser: High-performance parser for Alberta Energy Regulator compliance data. Rust-based automation for regulatory workflows." />
+    <meta name="keywords" content="AER ST1, Data Parsing, Rust, Regulatory Data, Compliance" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.css" rel="stylesheet" type="text/css" />
@@ -23,44 +22,69 @@
     <script src="scripts/tailwind.config.js"></script>
     <script src="scripts/footer.js" defer></script>
 </head>
-<html data-theme="lofi"></html>
-<body class="flex flex-col min-h-screen bg-base-200 font-mono">
+
+<body class="flex flex-col min-h-screen bg-base-200 font-sans">
     <header-component></header-component>
     <div class="container mx-auto px-4 py-8">
         <header class="text-center mb-12">
             <h1 class="text-5xl font-bold mb-4 text-primary">AER ST1 Parser</h1>
-            <h2 class="text-3xl text-secondary">Transforming Regulatory Compliance Through High-Performance Data Processing</h2>
+            <h2 class="text-3xl text-secondary">High-Performance Regulatory Data Processing in Rust</h2>
         </header>
 
-        <main class="bg-base-100 shadow-xl rounded-box p-8">
+        <article class="bg-base-100 shadow-xl rounded-box p-8">
+            <script type="application/ld+json">
+            {
+                "@context": "https://schema.org/",
+                "@type": "SoftwareSourceCode",
+                "name": "AER ST1 Parser",
+                "description": "High-performance parser for Alberta Energy Regulator compliance data",
+                "programmingLanguage": "Rust",
+                "author": {
+                    "@type": "Person",
+                    "name": "Jesus Jayaro"
+                },
+                "url": "https://github.com/jojayaro/aer_parser"
+            }
+            </script>
             <section id="project-overview" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Strategic POC: Modernizing Regulatory Data Operations</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Proof of Concept: Automating Regulatory Data
+                    Processing</h3>
                 <p class="text-lg leading-relaxed mb-4">
-                    This proof-of-concept addresses a critical challenge in regulated industries: how to efficiently process complex, non-standard regulatory data formats that can significantly impact operational efficiency and compliance costs. Using Alberta Energy Regulator (AER) ST1 license data as a representative example, this exploration demonstrates how modern data processing approaches can transform regulatory workflows.
+                    A high-performance parser for Alberta Energy Regulator (AER) ST1 license data, built in Rust.
+                    Demonstrates how modern programming approaches can replace error-prone manual workflows and complex
+                    legacy scripts with fast, reliable automation.
                 </p>
                 <p class="text-lg leading-relaxed mb-4">
-                    The business impact is significant: traditional approaches to processing regulatory data often involve manual intervention, are error-prone, and create bottlenecks that can delay critical business decisions. This POC validates how high-performance, automated processing can dramatically reduce time-to-insight for compliance-critical data while improving accuracy and operational reliability.
+                    Traditional regulatory data processing is slow and manual. This parser reduces processing time from
+                    hours to minutes while eliminating human error and operational bottlenecks. The patterns apply to
+                    any organization processing complex compliance data.
                 </p>
                 <p class="text-lg leading-relaxed">
-                    While this specific implementation focuses on energy sector licensing data, the architectural patterns and performance improvements apply broadly to any organization dealing with complex, domain-specific data formats from regulatory bodies—financial reporting, environmental compliance, safety documentation, or any scenario where data processing speed directly impacts business agility.
+                    Typical use cases: financial reporting, environmental compliance, energy sector licensing, or any
+                    domain where regulatory data processing blocks downstream analytics.
                 </p>
             </section>
 
             <section id="features" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Business Impact & Operational Benefits</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Key Benefits</h3>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li><strong>Dramatic Time-to-Insight Reduction:</strong> Automated processing eliminates manual data preparation bottlenecks, potentially reducing regulatory data processing time from hours to minutes—enabling faster business decision-making.</li>
-                    <li><strong>Operational Risk Reduction:</strong> Robust error handling and validation eliminate human error from data processing workflows, reducing compliance risks and the costs associated with data quality issues.</li>
-                    <li><strong>Scalable Processing Capabilities:</strong> Memory-efficient design enables processing of large regulatory datasets without infrastructure scaling, demonstrating potential for significant cost savings as data volumes grow.</li>
-                    <li><strong>Integration-Ready Outputs:</strong> Standardized CSV format ensures seamless integration with existing business intelligence and analytics tools, reducing implementation complexity and training requirements.</li>
-                    <li><strong>Future-Proof Architecture:</strong> High-performance foundation can adapt to changing regulatory formats and requirements, protecting investment in data processing infrastructure while maintaining operational flexibility.</li>
+                    <li><strong>Speed:</strong> Hours of manual processing reduced to minutes</li>
+                    <li><strong>Accuracy:</strong> Eliminates human error in data extraction and validation</li>
+                    <li><strong>Scalability:</strong> Memory-efficient processing handles large datasets without
+                        infrastructure growth</li>
+                    <li><strong>Integration:</strong> Standard CSV output works with existing BI and analytics tools
+                    </li>
+                    <li><strong>Maintainability:</strong> Rust's type safety catches errors at compile time, reducing
+                        runtime issues</li>
                 </ul>
             </section>
-            
+
             <section id="architectural-notes" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Architectural Notes</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Technical Approach</h3>
                 <p class="text-lg leading-relaxed">
-                    This project underscores the importance of meticulous design in the data ingestion layer of any data architecture. The choice of Rust was driven by its performance and memory safety features, ensuring the parser is both fast and reliable. The focus on robust error handling and standardized output formats reflects best practices in creating data pipelines that are resilient and easy to integrate into broader enterprise systems. Such components are fundamental for any organization relying on timely and accurate data from external regulatory bodies.
+                    Built in Rust for performance and reliability. The parser combines async I/O for rapid data fetching
+                    with careful error handling and validation. Output is standardized CSV for easy integration. A
+                    practical example of how systems-level programming can solve enterprise data problems efficiently.
                 </p>
             </section>
 
@@ -76,12 +100,13 @@
             <section id="github-link" class="mb-8">
                 <h3 class="text-2xl font-semibold mb-4 text-primary">GitHub Repository</h3>
                 <p>
-                    <a href="https://github.com/jojayaro/aer_parser" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <a href="https://github.com/jojayaro/aer_parser" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-primary">
                         View on GitHub
                     </a>
                 </p>
             </section>
-        </main>
+        </article>
     </div>
     <footer-component class="mt-auto w-full"></footer-component>
 </body>

@@ -9,22 +9,20 @@ const cardData = [
 
 function createCards() {
   const container = document.getElementById('cardContainer');
-  cardData.forEach(card => {
-    const cardHTML = `
-        <div class="card w-80 bg-base-300 shadow-xl mx-auto">
-          <div class="card-body">
-            <div class="">
-              <div style="display: flex; justify-content: space-between;">
-                <span>${card.title}</span>
-                <div id="last_${card.id}"></div>
-              </div>
-              <div id="${card.id}_chart"></div>
-            </div>
+  const html = cardData.map(card => `
+    <div class="card w-80 bg-base-300 shadow-xl mx-auto">
+      <div class="card-body">
+        <div class="">
+          <div style="display: flex; justify-content: space-between;">
+            <span>${card.title}</span>
+            <div id="last_${card.id}"></div>
           </div>
+          <div id="${card.id}_chart"></div>
         </div>
-      `;
-    container.innerHTML += cardHTML;
-  });
+      </div>
+    </div>
+  `).join('');
+  container.innerHTML = html;
 }
 
 document.addEventListener('DOMContentLoaded', createCards);

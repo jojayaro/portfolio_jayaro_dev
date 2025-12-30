@@ -1,12 +1,11 @@
 <!doctype html>
-<html>
+<html lang="en" data-theme="lofi">
 
 <head>
-    <title>SWPC to PostgreSQL - Hybrid Architecture POC | Jesus Jayaro</title>
+    <title>SWPC to PostgreSQL - Hybrid Architecture | Jesus Jayaro</title>
     <meta name="description"
-        content="SWPC to PostgreSQL: A strategic proof-of-concept exploring hybrid storage strategies, balancing modern lakehouse approaches with traditional relational database strengths for enterprise analytics." />
-    <meta name="keywords"
-        content="SWPC, PostgreSQL, Solar Wind, Data Pipeline, Data Architecture, Rust, Jesus Jayaro" />
+        content="SWPC to PostgreSQL: Hybrid storage strategy combining modern async Rust ingestion with traditional PostgreSQL analytics." />
+    <meta name="keywords" content="PostgreSQL, Data Pipeline, Hybrid Architecture, Rust" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.css" rel="stylesheet" type="text/css" />
@@ -23,44 +22,70 @@
     <script src="scripts/tailwind.config.js"></script>
     <script src="scripts/footer.js" defer></script>
 </head>
-<html data-theme="lofi"></html>
-<body class="flex flex-col min-h-screen bg-base-200 font-mono">
+
+<body class="flex flex-col min-h-screen bg-base-200 font-sans">
     <header-component></header-component>
     <div class="container mx-auto px-4 py-8">
         <header class="text-center mb-12">
             <h1 class="text-5xl font-bold mb-4 text-primary">SWPC to PostgreSQL</h1>
-            <h2 class="text-3xl text-secondary">Exploring Hybrid Storage Strategies for Enterprise Analytics</h2>
+            <h2 class="text-3xl text-secondary">Hybrid Architecture: Modern Ingestion with Traditional Analytics</h2>
         </header>
 
-        <main class="bg-base-100 shadow-xl rounded-box p-8">
+        <article class="bg-base-100 shadow-xl rounded-box p-8">
+            <script type="application/ld+json">
+            {
+                "@context": "https://schema.org/",
+                "@type": "SoftwareSourceCode",
+                "name": "SWPC to PostgreSQL",
+                "description": "Hybrid architecture combining modern async Rust ingestion with traditional PostgreSQL analytics",
+                "programmingLanguage": "Rust",
+                "author": {
+                    "@type": "Person",
+                    "name": "Jesus Jayaro"
+                },
+                "url": "https://github.com/jojayaro/swpc-psql"
+            }
+            </script>
             <section id="project-overview" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Strategic Exploration: When Traditional Meets Modern</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Proof of Concept: Hybrid Storage Strategy</h3>
                 <p class="text-lg leading-relaxed mb-4">
-                    This proof-of-concept investigates a critical enterprise decision: when does it make business sense to leverage traditional relational databases alongside modern lakehouse architectures? Using real-time solar wind data as a representative workload, this exploration demonstrates how to design hybrid storage strategies that maximize the strengths of both approaches.
+                    A pipeline combining modern async Rust ingestion with traditional PostgreSQL storage. Demonstrates
+                    when relational databases outperform newer approaches for specific analytical workloads.
                 </p>
                 <p class="text-lg leading-relaxed mb-4">
-                    The key insight: while modern lakehouse solutions excel at handling high-volume, diverse data types, mature relational databases like PostgreSQL often provide superior performance for specific analytical workloads, especially those requiring complex joins, strict consistency, or integration with existing BI tools that are already optimized for SQL.
+                    Key insight: PostgreSQL excels at complex joins, strict consistency, and integration with existing
+                    BI tools. Modern lakehouses handle volume. Use the right tool for each job rather than forcing one
+                    approach across all workloads.
                 </p>
                 <p class="text-lg leading-relaxed">
-                    This POC validates the business value of thoughtful hybrid architectures—rather than forcing a complete migration to new technologies, organizations can strategically combine approaches to optimize both performance and operational efficiency based on specific use case requirements.
+                    Practical example of how thoughtful hybrid architectures can be more cost-effective and maintainable
+                    than single-technology solutions.
                 </p>
             </section>
 
             <section id="features" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Business Value & Strategic Benefits Demonstrated</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Key Benefits</h3>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li><strong>Optimized Query Performance:</strong> Demonstrates scenarios where relational databases can deliver superior performance for complex analytical queries, potentially reducing query costs and improving user experience.</li>
-                    <li><strong>Seamless BI Integration:</strong> Shows how structured relational storage enables immediate integration with existing enterprise BI tools and reporting systems, reducing implementation time and training requirements.</li>
-                    <li><strong>Operational Simplicity:</strong> Proves that traditional database operational patterns (backup, monitoring, maintenance) can provide lower total cost of ownership for specific workloads compared to complex distributed systems.</li>
-                    <li><strong>Hybrid Architecture Benefits:</strong> Illustrates how combining relational databases with modern ingestion techniques provides the best of both worlds—mature operational characteristics with modern data processing capabilities.</li>
-                    <li><strong>Risk-Managed Innovation:</strong> Demonstrates how to adopt new technologies incrementally while maintaining business continuity through proven, reliable storage layers for critical analytical workloads.</li>
+                    <li><strong>Query Performance:</strong> Relational databases excel at complex analytical queries
+                        with joins and aggregations</li>
+                    <li><strong>BI Integration:</strong> Works seamlessly with existing Power BI, Tableau, and other
+                        enterprise BI tools</li>
+                    <li><strong>Operational Simplicity:</strong> Familiar backup, monitoring, and maintenance patterns
+                        reduce complexity and training</li>
+                    <li><strong>Hybrid Benefits:</strong> Modern ingestion combined with proven storage provides
+                        performance with reliability</li>
+                    <li><strong>Incremental Innovation:</strong> Adopt new technologies where they matter while
+                        maintaining business continuity</li>
                 </ul>
             </section>
 
             <section id="architectural-notes" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Architectural Notes</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Technical Approach</h3>
                 <p class="text-lg leading-relaxed">
-                    The decision to use PostgreSQL in this POC reflects scenarios where a relational data model is preferred for its strong consistency, mature SQL interface, and suitability for structured reporting or BI tool integration. The pipeline design emphasizes data integrity through careful transformation and loading processes. Rust was chosen for the ingestion logic due to its performance and reliability. This project serves as an example of how to architect robust ETL/ELT processes for populating relational datas, a foundational component in many enterprise data strategies.
+                    PostgreSQL's relational model, strong consistency, and SQL interface suit structured reporting and
+                    BI integration. Rust handles ingestion for performance and reliability. Demonstrates how to
+                    architect robust ETL processes for relational systems, a foundational component in enterprise data
+                    strategies.
                 </p>
             </section>
 
@@ -76,12 +101,13 @@
             <section id="github-link" class="mb-8">
                 <h3 class="text-2xl font-semibold mb-4 text-primary">GitHub Repository</h3>
                 <p>
-                    <a href="https://github.com/jojayaro/swpc-psql" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <a href="https://github.com/jojayaro/swpc-psql" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-primary">
                         View on GitHub
                     </a>
                 </p>
             </section>
-        </main>
+        </article>
     </div>
     <footer-component class="mt-auto w-full"></footer-component>
 </body>
