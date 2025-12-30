@@ -1,12 +1,11 @@
 <!doctype html>
-<html>
+<html lang="en" data-theme="lofi">
 
 <head>
-    <title>Aurora Monitor - Future-Ready Real-Time Data Engineering | Jesus Jayaro</title>
+    <title>Aurora Monitor - Real-Time Data Engineering | Jesus Jayaro</title>
     <meta name="description"
-        content="Aurora Monitor: A proof-of-concept showcasing next-generation real-time data engineering, from high-performance ingestion to responsive visualization, demonstrating business-ready innovation." />
-    <meta name="keywords"
-        content="Aurora Monitor, Real-Time Data Architecture, Solar Wind, Data Visualization, Actix-web, HTMX, Plotly, Delta Lake, Rust, Jesus Jayaro" />
+        content="Aurora Monitor: Real-time data pipeline and dashboard in Rust. Proof-of-concept demonstrating high-performance ingestion, Delta Lake storage, and responsive analytics." />
+    <meta name="keywords" content="Aurora Monitor, Real-Time Data, Rust, Delta Lake, HTMX, Plotly, Data Engineering" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.css" rel="stylesheet" type="text/css" />
@@ -23,37 +22,61 @@
     <script src="scripts/tailwind.config.js"></script>
     <script src="scripts/footer.js" defer></script>
 </head>
-<html data-theme="lofi"></html>
-<body class="flex flex-col min-h-screen bg-base-200 font-mono">
+
+<body class="flex flex-col min-h-screen bg-base-200 font-sans">
     <header-component></header-component>
     <div class="container mx-auto px-4 py-8">
         <header class="text-center mb-12">
             <h1 class="text-5xl font-bold mb-4 text-primary">Aurora Monitor</h1>
-             <h2 class="text-3xl text-secondary">Real-Time Data Pipeline & Dashboard in Rust</h2>
+            <h2 class="text-3xl text-secondary">Real-Time Data Pipeline & Dashboard in Rust</h2>
         </header>
 
-        <main class="bg-base-100 shadow-xl rounded-box p-8">
+        <article class="bg-base-100 shadow-xl rounded-box p-8">
+            <script type="application/ld+json">
+            {
+                "@context": "https://schema.org/",
+                "@type": "SoftwareSourceCode",
+                "name": "Aurora Monitor",
+                "description": "Real-time data pipeline and dashboard in Rust with Delta Lake storage",
+                "programmingLanguage": "Rust",
+                "author": {
+                    "@type": "Person",
+                    "name": "Jesus Jayaro"
+                },
+                "url": "https://github.com/jojayaro/actix_htmx_plotly"
+            }
+            </script>
             <section id="project-overview" class="mb-8">
                 <h3 class="text-2xl font-semibold mb-4 text-primary">Proof of Concept: Real-Time Analytics Platform</h3>
                 <p class="text-lg leading-relaxed mb-4">
-                    A complete end-to-end real-time data system: high-performance ingestion, reliable storage (Delta Lake), and responsive web dashboard. Demonstrates how modern systems-level programming can build production-grade data platforms efficiently.
+                    A complete end-to-end real-time data system: high-performance ingestion, reliable storage (Delta
+                    Lake), and responsive web dashboard. Demonstrates how modern systems-level programming can build
+                    production-grade data platforms efficiently.
                 </p>
                 <p class="text-lg leading-relaxed mb-4">
-                    Uses space weather data as the example domain. Architecture applies directly to operational monitoring, IoT analytics, financial data streaming, or any real-time analytics use case.
+                    Uses space weather data as the example domain. Architecture applies directly to operational
+                    monitoring, IoT analytics, financial data streaming, or any real-time analytics use case.
                 </p>
                 <p class="text-lg leading-relaxed">
-                    Key insight: building fast, reliable systems doesn't require complex infrastructure. This project shows how thoughtful architectural choices reduce both operational overhead and total cost of ownership.
+                    Key insight: building fast, reliable systems doesn't require complex infrastructure. This project
+                    shows how thoughtful architectural choices reduce both operational overhead and total cost of
+                    ownership.
                 </p>
             </section>
 
             <section id="features" class="mb-8">
                 <h3 class="text-2xl font-semibold mb-4 text-primary">Technical Highlights</h3>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li><strong>Efficient Ingestion:</strong> Async I/O and parallelization for high-throughput data collection</li>
-                    <li><strong>Reliable Storage:</strong> Delta Lake provides ACID guarantees and time-travel queries for audit compliance</li>
-                    <li><strong>Responsive Dashboard:</strong> HTMX + Plotly for interactive visualization without SPA complexity</li>
-                    <li><strong>Simple Architecture:</strong> End-to-end flow with minimal moving parts, reducing operational overhead</li>
-                    <li><strong>Flexible Analysis:</strong> User-selectable time ranges (2 hours to 7 days) for different analysis needs</li>
+                    <li><strong>Efficient Ingestion:</strong> Async I/O and parallelization for high-throughput data
+                        collection</li>
+                    <li><strong>Reliable Storage:</strong> Delta Lake provides ACID guarantees and time-travel queries
+                        for audit compliance</li>
+                    <li><strong>Responsive Dashboard:</strong> HTMX + Plotly for interactive visualization without SPA
+                        complexity</li>
+                    <li><strong>Simple Architecture:</strong> End-to-end flow with minimal moving parts, reducing
+                        operational overhead</li>
+                    <li><strong>Flexible Analysis:</strong> User-selectable time ranges (2 hours to 7 days) for
+                        different analysis needs</li>
                     <li><strong>Production-Ready Patterns:</strong> Scales from POC to enterprise deployment</li>
                 </ul>
             </section>
@@ -61,10 +84,13 @@
             <section id="architectural-notes" class="mb-8">
                 <h3 class="text-2xl font-semibold mb-4 text-primary">Technical Approach</h3>
                 <p class="text-lg leading-relaxed mb-4">
-                    Decoupled architecture allows independent optimization of each component. Real-time ingestion runs separately from storage and API layers, improving reliability and maintainability.
+                    Decoupled architecture allows independent optimization of each component. Real-time ingestion runs
+                    separately from storage and API layers, improving reliability and maintainability.
                 </p>
                 <p class="text-lg leading-relaxed">
-                    Modern lakehouse architecture provides both real-time responsiveness for business users and historical reliability for compliance and audit. Demonstrates how thoughtful system design reduces both operational complexity and total cost of ownership.
+                    Modern lakehouse architecture provides both real-time responsiveness for business users and
+                    historical reliability for compliance and audit. Demonstrates how thoughtful system design reduces
+                    both operational complexity and total cost of ownership.
                 </p>
             </section>
 
@@ -81,12 +107,13 @@
             <section id="github-link" class="mb-8">
                 <h3 class="text-2xl font-semibold mb-4 text-primary">GitHub Repository</h3>
                 <p>
-                    <a href="https://github.com/jojayaro/actix_htmx_plotly" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <a href="https://github.com/jojayaro/actix_htmx_plotly" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-primary">
                         View on GitHub
                     </a>
                 </p>
             </section>
-        </main>
+        </article>
     </div>
     <footer-component class="mt-auto w-full"></footer-component>
 </body>

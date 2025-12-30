@@ -1,12 +1,11 @@
 <!doctype html>
-<html>
+<html lang="en" data-theme="lofi">
 
 <head>
-    <title>SWPC to Delta Lake - Future-Ready Lakehouse POC | Jesus Jayaro</title>
+    <title>SWPC to Delta Lake - Real-Time Streaming POC | Jesus Jayaro</title>
     <meta name="description"
-        content="SWPC to Delta Lake: A strategic proof-of-concept exploring modern lakehouse architecture for real-time streaming data, demonstrating business-ready reliability and performance improvements." />
-    <meta name="keywords"
-        content="SWPC, Delta Lake, Solar Wind, Data Lake Architecture, Data Engineering, Rust, Real-Time Data, Jesus Jayaro" />
+        content="SWPC to Delta Lake: Streaming pipeline with transactional guarantees. Real-time lakehouse architecture built in Rust with ACID transactions." />
+    <meta name="keywords" content="Delta Lake, Streaming, Real-Time, Rust, Data Engineering, ACID Transactions" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.css" rel="stylesheet" type="text/css" />
@@ -23,47 +22,74 @@
     <script src="scripts/tailwind.config.js"></script>
     <script src="scripts/footer.js" defer></script>
 </head>
-<html data-theme="lofi"></html>
-<body class="flex flex-col min-h-screen bg-base-200 font-mono">
+
+<body class="flex flex-col min-h-screen bg-base-200 font-sans">
     <header-component></header-component>
     <div class="container mx-auto px-4 py-8">
         <header class="text-center mb-12">
             <h1 class="text-5xl font-bold mb-4 text-primary">SWPC to Delta Lake</h1>
-             <h2 class="text-3xl text-secondary">Real-Time Streaming Pipeline with Transactional Guarantees</h2>
+            <h2 class="text-3xl text-secondary">Real-Time Streaming Pipeline with Transactional Guarantees</h2>
         </header>
 
-        <main class="bg-base-100 shadow-xl rounded-box p-8">
+        <article class="bg-base-100 shadow-xl rounded-box p-8">
+            <script type="application/ld+json">
+            {
+                "@context": "https://schema.org/",
+                "@type": "SoftwareSourceCode",
+                "name": "SWPC to Delta Lake",
+                "description": "High-performance streaming pipeline feeding Delta Lake with ACID transactions",
+                "programmingLanguage": "Rust",
+                "author": {
+                    "@type": "Person",
+                    "name": "Jesus Jayaro"
+                },
+                "url": "https://github.com/jojayaro/swpc_delta"
+            }
+            </script>
             <section id="project-overview" class="mb-8">
                 <h3 class="text-2xl font-semibold mb-4 text-primary">Proof of Concept: Modern Lakehouse Streaming</h3>
                 <p class="text-lg leading-relaxed mb-4">
-                    High-performance ingestion pipeline feeding Delta Lake, combining transactional guarantees with streaming scalability. Demonstrates how modern lakehouse architecture handles high-velocity data while ensuring reliability.
+                    High-performance ingestion pipeline feeding Delta Lake, combining transactional guarantees with
+                    streaming scalability. Demonstrates how modern lakehouse architecture handles high-velocity data
+                    while ensuring reliability.
                 </p>
                 <p class="text-lg leading-relaxed mb-4">
-                    Key insight: traditional data lakes sacrifice reliability for performance, or vice versa. Delta Lake provides both. ACID transactions prevent data corruption, while high-performance ingestion handles volume efficiently.
+                    Key insight: traditional data lakes sacrifice reliability for performance, or vice versa. Delta Lake
+                    provides both. ACID transactions prevent data corruption, while high-performance ingestion handles
+                    volume efficiently.
                 </p>
                 <p class="text-lg leading-relaxed">
-                    Applicable to IoT sensors, financial market data, operational telemetry, or any use case where data corruption or downtime has immediate business cost.
+                    Applicable to IoT sensors, financial market data, operational telemetry, or any use case where data
+                    corruption or downtime has immediate business cost.
                 </p>
             </section>
 
             <section id="features" class="mb-8">
                 <h3 class="text-2xl font-semibold mb-4 text-primary">Key Benefits</h3>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li><strong>ACID Guarantees:</strong> Transactions prevent data corruption that cascades into reporting failures</li>
-                    <li><strong>Cost-Efficient Performance:</strong> High-throughput ingestion with minimal resource overhead</li>
-                    <li><strong>Resilience:</strong> Error handling and automatic recovery despite API inconsistencies or network issues</li>
-                    <li><strong>Audit-Ready:</strong> Time-travel capabilities and schema enforcement provide built-in compliance features</li>
-                    <li><strong>Unified Analytics:</strong> Real-time and historical analysis from the same storage, reducing architectural complexity</li>
+                    <li><strong>ACID Guarantees:</strong> Transactions prevent data corruption that cascades into
+                        reporting failures</li>
+                    <li><strong>Cost-Efficient Performance:</strong> High-throughput ingestion with minimal resource
+                        overhead</li>
+                    <li><strong>Resilience:</strong> Error handling and automatic recovery despite API inconsistencies
+                        or network issues</li>
+                    <li><strong>Audit-Ready:</strong> Time-travel capabilities and schema enforcement provide built-in
+                        compliance features</li>
+                    <li><strong>Unified Analytics:</strong> Real-time and historical analysis from the same storage,
+                        reducing architectural complexity</li>
                 </ul>
             </section>
 
             <section id="architectural-notes" class="mb-8">
                 <h3 class="text-2xl font-semibold mb-4 text-primary">Technical Approach</h3>
                 <p class="text-lg leading-relaxed mb-4">
-                    Delta Lake's transactional guarantees combined with high-performance async ingestion solves two critical problems: preventing data corruption incidents (weeks of remediation) and eliminating infrastructure over-provisioning for performance bottlenecks.
+                    Delta Lake's transactional guarantees combined with high-performance async ingestion solves two
+                    critical problems: preventing data corruption incidents (weeks of remediation) and eliminating
+                    infrastructure over-provisioning for performance bottlenecks.
                 </p>
                 <p class="text-lg leading-relaxed">
-                    Deployment and maintenance are actually simpler than traditional streaming architectures. Reduced operational overhead and more predictable total cost of ownership as systems scale.
+                    Deployment and maintenance are actually simpler than traditional streaming architectures. Reduced
+                    operational overhead and more predictable total cost of ownership as systems scale.
                 </p>
             </section>
 
@@ -79,12 +105,13 @@
             <section id="github-link" class="mb-8">
                 <h3 class="text-2xl font-semibold mb-4 text-primary">GitHub Repository</h3>
                 <p>
-                    <a href="https://github.com/jojayaro/swpc_delta" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <a href="https://github.com/jojayaro/swpc_delta" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-primary">
                         View on GitHub
                     </a>
                 </p>
             </section>
-        </main>
+        </article>
     </div>
     <footer-component class="mt-auto w-full"></footer-component>
 </body>

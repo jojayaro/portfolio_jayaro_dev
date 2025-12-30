@@ -1,12 +1,11 @@
 <!doctype html>
-<html>
+<html lang="en" data-theme="lofi">
 
 <head>
-    <title>AER ST1 Parser - Regulatory Data Processing POC | Jesus Jayaro</title>
+    <title>AER ST1 Parser - Regulatory Data Processing | Jesus Jayaro</title>
     <meta name="description"
-        content="AER ST1 Parser: A proof-of-concept demonstrating high-performance regulatory data processing, showcasing how modern approaches can dramatically improve compliance workflows and operational efficiency." />
-    <meta name="keywords"
-        content="AER ST1, Data Ingestion, Data Parsing, Data Architecture, Rust, Alberta Energy Regulator, Jesus Jayaro" />
+        content="AER ST1 Parser: High-performance parser for Alberta Energy Regulator compliance data. Rust-based automation for regulatory workflows." />
+    <meta name="keywords" content="AER ST1, Data Parsing, Rust, Regulatory Data, Compliance" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.css" rel="stylesheet" type="text/css" />
@@ -23,26 +22,46 @@
     <script src="scripts/tailwind.config.js"></script>
     <script src="scripts/footer.js" defer></script>
 </head>
-<html data-theme="lofi"></html>
-<body class="flex flex-col min-h-screen bg-base-200 font-mono">
+
+<body class="flex flex-col min-h-screen bg-base-200 font-sans">
     <header-component></header-component>
     <div class="container mx-auto px-4 py-8">
         <header class="text-center mb-12">
             <h1 class="text-5xl font-bold mb-4 text-primary">AER ST1 Parser</h1>
-             <h2 class="text-3xl text-secondary">High-Performance Regulatory Data Processing in Rust</h2>
+            <h2 class="text-3xl text-secondary">High-Performance Regulatory Data Processing in Rust</h2>
         </header>
 
-        <main class="bg-base-100 shadow-xl rounded-box p-8">
+        <article class="bg-base-100 shadow-xl rounded-box p-8">
+            <script type="application/ld+json">
+            {
+                "@context": "https://schema.org/",
+                "@type": "SoftwareSourceCode",
+                "name": "AER ST1 Parser",
+                "description": "High-performance parser for Alberta Energy Regulator compliance data",
+                "programmingLanguage": "Rust",
+                "author": {
+                    "@type": "Person",
+                    "name": "Jesus Jayaro"
+                },
+                "url": "https://github.com/jojayaro/aer_parser"
+            }
+            </script>
             <section id="project-overview" class="mb-8">
-                <h3 class="text-2xl font-semibold mb-4 text-primary">Proof of Concept: Automating Regulatory Data Processing</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Proof of Concept: Automating Regulatory Data
+                    Processing</h3>
                 <p class="text-lg leading-relaxed mb-4">
-                    A high-performance parser for Alberta Energy Regulator (AER) ST1 license data, built in Rust. Demonstrates how modern programming approaches can replace error-prone manual workflows and complex legacy scripts with fast, reliable automation.
+                    A high-performance parser for Alberta Energy Regulator (AER) ST1 license data, built in Rust.
+                    Demonstrates how modern programming approaches can replace error-prone manual workflows and complex
+                    legacy scripts with fast, reliable automation.
                 </p>
                 <p class="text-lg leading-relaxed mb-4">
-                    Traditional regulatory data processing is slow and manual. This parser reduces processing time from hours to minutes while eliminating human error and operational bottlenecks. The patterns apply to any organization processing complex compliance data.
+                    Traditional regulatory data processing is slow and manual. This parser reduces processing time from
+                    hours to minutes while eliminating human error and operational bottlenecks. The patterns apply to
+                    any organization processing complex compliance data.
                 </p>
                 <p class="text-lg leading-relaxed">
-                    Typical use cases: financial reporting, environmental compliance, energy sector licensing, or any domain where regulatory data processing blocks downstream analytics.
+                    Typical use cases: financial reporting, environmental compliance, energy sector licensing, or any
+                    domain where regulatory data processing blocks downstream analytics.
                 </p>
             </section>
 
@@ -51,16 +70,21 @@
                 <ul class="list-disc pl-5 space-y-2">
                     <li><strong>Speed:</strong> Hours of manual processing reduced to minutes</li>
                     <li><strong>Accuracy:</strong> Eliminates human error in data extraction and validation</li>
-                    <li><strong>Scalability:</strong> Memory-efficient processing handles large datasets without infrastructure growth</li>
-                    <li><strong>Integration:</strong> Standard CSV output works with existing BI and analytics tools</li>
-                    <li><strong>Maintainability:</strong> Rust's type safety catches errors at compile time, reducing runtime issues</li>
+                    <li><strong>Scalability:</strong> Memory-efficient processing handles large datasets without
+                        infrastructure growth</li>
+                    <li><strong>Integration:</strong> Standard CSV output works with existing BI and analytics tools
+                    </li>
+                    <li><strong>Maintainability:</strong> Rust's type safety catches errors at compile time, reducing
+                        runtime issues</li>
                 </ul>
             </section>
-            
+
             <section id="architectural-notes" class="mb-8">
                 <h3 class="text-2xl font-semibold mb-4 text-primary">Technical Approach</h3>
                 <p class="text-lg leading-relaxed">
-                    Built in Rust for performance and reliability. The parser combines async I/O for rapid data fetching with careful error handling and validation. Output is standardized CSV for easy integration. A practical example of how systems-level programming can solve enterprise data problems efficiently.
+                    Built in Rust for performance and reliability. The parser combines async I/O for rapid data fetching
+                    with careful error handling and validation. Output is standardized CSV for easy integration. A
+                    practical example of how systems-level programming can solve enterprise data problems efficiently.
                 </p>
             </section>
 
@@ -76,12 +100,13 @@
             <section id="github-link" class="mb-8">
                 <h3 class="text-2xl font-semibold mb-4 text-primary">GitHub Repository</h3>
                 <p>
-                    <a href="https://github.com/jojayaro/aer_parser" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <a href="https://github.com/jojayaro/aer_parser" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-primary">
                         View on GitHub
                     </a>
                 </p>
             </section>
-        </main>
+        </article>
     </div>
     <footer-component class="mt-auto w-full"></footer-component>
 </body>

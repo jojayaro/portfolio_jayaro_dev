@@ -1,161 +1,163 @@
 <!doctype html>
 <html data-theme="lofi">
-    <head>
-        <title>Quackmire - Accelerating Data Discovery POC | Jesus Jayaro</title>
-        <meta
-            name="description"
-            content="Quackmire: A proof-of-concept terminal-based data exploration tool demonstrating how efficient interfaces can dramatically accelerate the data discovery phase critical for business insights."
-        />
-        <meta
-            name="keywords"
-            content="Quackmire, DuckDB, SQL Client, Data Exploration, Data Architecture, Rust, ratatui, Terminal UI, Jesus Jayaro"
-        />
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.css"
-            rel="stylesheet"
-            type="text/css"
-        />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-            rel="stylesheet"
-        />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-LCYV5QDN4X"
-        ></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
-            gtag("config", "G-LCYV5QDN4X");
-        </script>
-        <script src="scripts/header.js" defer></script>
-        <script src="scripts/tailwind.config.js"></script>
-        <script src="scripts/footer.js" defer></script>
-    </head>
 
-    <body class="flex flex-col min-h-screen bg-base-200 font-mono">
-        <header-component></header-component>
-        <div class="container mx-auto px-4 py-8">
-            <header class="text-center mb-12">
-                <h1 class="text-5xl font-bold mb-4 text-primary">Quackmire</h1>
-                <h2 class="text-3xl text-secondary">
-                    Terminal-Based SQL Client for Rapid Data Exploration
-                </h2>
-            </header>
+<head>
+    <title>Quackmire - Accelerating Data Discovery POC | Jesus Jayaro</title>
+    <meta name="description"
+        content="Quackmire: A proof-of-concept terminal-based data exploration tool demonstrating how efficient interfaces can dramatically accelerate the data discovery phase critical for business insights." />
+    <meta name="keywords"
+        content="Quackmire, DuckDB, SQL Client, Data Exploration, Data Architecture, Rust, ratatui, Terminal UI, Jesus Jayaro" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCYV5QDN4X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-LCYV5QDN4X");
+    </script>
+    <script src="scripts/header.js" defer></script>
+    <script src="scripts/tailwind.config.js"></script>
+    <script src="scripts/footer.js" defer></script>
+</head>
 
-            <main class="bg-base-100 shadow-xl rounded-box p-8">
-                <section id="project-overview" class="mb-8">
-                    <h3 class="text-2xl font-semibold mb-4 text-primary">
-                        Proof of Concept: Fast Data Exploration Tool
-                    </h3>
-                    <p class="text-lg leading-relaxed mb-4">
-                        A high-performance terminal UI for exploring and querying data with DuckDB. Built for data professionals who value speed and efficiency over GUI convenience.
-                    </p>
-                    <p class="text-lg leading-relaxed mb-4">
-                        Removes friction from the exploration process: built-in file browser, multi-line SQL editor, immediate execution, and keyboard-optimized workflows. Reduces time from raw data to validated insights.
-                    </p>
-                    <p class="text-lg leading-relaxed">
-                        Demonstrates how purpose-built tools increase productivity. Fast iteration on data exploration directly accelerates business decision-making.
-                    </p>
-                </section>
-                <section>
-                    <div class="flex justify-center">
-                        <img
-                            src="./assets/Quackmire_Demo.gif"
-                            alt="Quackmire Demo"
-                            class="rounded-lg shadow-lg max-w-full h-auto"
-                        />
-                    </div>
-                    <br />
-                </section>
-                <section id="features" class="mb-8">
-                    <h3 class="text-2xl font-semibold mb-4 text-primary">
-                        Key Features
-                    </h3>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li>
-                            <strong>Built-in File Browser:</strong> Navigate and query data files without context switching
-                        </li>
-                        <li><strong>Multi-Line SQL Editor:</strong> Write and execute complex queries without friction
-                        </li>
-                        <li><strong>Instant Tabular Results:</strong> Fast feedback loop for iterative analysis
-                        </li>
-                        <li><strong>Error Handling:</strong> Clear feedback when queries fail, minimal time troubleshooting
-                        </li>
-                        <li>
-                            <strong>Keyboard-Optimized:</strong> Power users can navigate and execute entirely from keyboard
-                        </li>
-                    </ul>
-                </section>
+<body class="flex flex-col min-h-screen bg-base-200 font-sans">
+    <header-component></header-component>
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-bold mb-4 text-primary">Quackmire</h1>
+            <h2 class="text-3xl text-secondary">
+                Terminal-Based SQL Client for Rapid Data Exploration
+            </h2>
+        </header>
 
-                <section id="architectural-notes" class="mb-8">
-                    <h3 class="text-2xl font-semibold mb-4 text-primary">Why This Matters</h3>
-                    <p class="text-lg leading-relaxed mb-4">
-                        In data-driven organizations, iteration speed directly impacts competitive advantage. Tools that remove friction allow faster hypothesis testing and faster decision-making.
-                    </p>
-                    <p class="text-lg leading-relaxed">
-                        Terminal UI design reflects real operational needs: lightweight, low-overhead, works in any environment. Demonstrates how thoughtful UX design in developer tools increases productivity without sacrificing functionality or increasing operational overhead.
-                    </p>
-                </section>
+        <article class="bg-base-100 shadow-xl rounded-box p-8">
+            <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "SoftwareSourceCode",
+                    "name": "Quackmire",
+                    "description": "Terminal-based SQL client for rapid data exploration",
+                    "programmingLanguage": "Rust",
+                    "author": {
+                        "@type": "Person",
+                        "name": "Jesus Jayaro"
+                    },
+                    "url": "https://github.com/jojayaro/quackmire"
+                }
+                </script>
+            <section id="project-overview" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">
+                    Proof of Concept: Fast Data Exploration Tool
+                </h3>
+                <p class="text-lg leading-relaxed mb-4">
+                    A high-performance terminal UI for exploring and querying data with DuckDB. Built for data
+                    professionals who value speed and efficiency over GUI convenience.
+                </p>
+                <p class="text-lg leading-relaxed mb-4">
+                    Removes friction from the exploration process: built-in file browser, multi-line SQL editor,
+                    immediate execution, and keyboard-optimized workflows. Reduces time from raw data to validated
+                    insights.
+                </p>
+                <p class="text-lg leading-relaxed">
+                    Demonstrates how purpose-built tools increase productivity. Fast iteration on data exploration
+                    directly accelerates business decision-making.
+                </p>
+            </section>
+            <section>
+                <div class="flex justify-center">
+                    <img src="./assets/Quackmire_Demo.gif" alt="Quackmire Demo"
+                        class="rounded-lg shadow-lg max-w-full h-auto" />
+                </div>
+                <br />
+            </section>
+            <section id="features" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">
+                    Key Features
+                </h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>
+                        <strong>Built-in File Browser:</strong> Navigate and query data files without context switching
+                    </li>
+                    <li><strong>Multi-Line SQL Editor:</strong> Write and execute complex queries without friction
+                    </li>
+                    <li><strong>Instant Tabular Results:</strong> Fast feedback loop for iterative analysis
+                    </li>
+                    <li><strong>Error Handling:</strong> Clear feedback when queries fail, minimal time troubleshooting
+                    </li>
+                    <li>
+                        <strong>Keyboard-Optimized:</strong> Power users can navigate and execute entirely from keyboard
+                    </li>
+                </ul>
+            </section>
 
-                <section id="tech-stack" class="mb-8">
-                    <h3 class="text-2xl font-semibold mb-4 text-primary">
-                        Core Technologies
-                    </h3>
-                    <ul class="list-disc pl-5 space-y-2">
-                        <li><strong>Language:</strong> Rust</li>
-                        <li><strong>TUI Library:</strong> ratatui</li>
-                        <li><strong>Database Engine:</strong> DuckDB</li>
-                    </ul>
-                </section>
+            <section id="architectural-notes" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">Why This Matters</h3>
+                <p class="text-lg leading-relaxed mb-4">
+                    In data-driven organizations, iteration speed directly impacts competitive advantage. Tools that
+                    remove friction allow faster hypothesis testing and faster decision-making.
+                </p>
+                <p class="text-lg leading-relaxed">
+                    Terminal UI design reflects real operational needs: lightweight, low-overhead, works in any
+                    environment. Demonstrates how thoughtful UX design in developer tools increases productivity without
+                    sacrificing functionality or increasing operational overhead.
+                </p>
+            </section>
 
-                <section id="installation" class="mb-8">
-                    <h3 class="text-2xl font-semibold mb-4 text-primary">
-                        Installation
-                    </h3>
-                    <p class="mb-4">
-                        To install Quackmire, you need to have Rust and Cargo
-                        installed on your system. Clone the repository and build
-                        the project:
-                    </p>
-                    <pre class="bg-base-300 p-4 rounded-lg overflow-x-auto">
+            <section id="tech-stack" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">
+                    Core Technologies
+                </h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Language:</strong> Rust</li>
+                    <li><strong>TUI Library:</strong> ratatui</li>
+                    <li><strong>Database Engine:</strong> DuckDB</li>
+                </ul>
+            </section>
+
+            <section id="installation" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">
+                    Installation
+                </h3>
+                <p class="mb-4">
+                    To install Quackmire, you need to have Rust and Cargo
+                    installed on your system. Clone the repository and build
+                    the project:
+                </p>
+                <pre class="bg-base-300 p-4 rounded-lg overflow-x-auto">
 <code>git clone https://github.com/yourusername/quackmire.git
 cd quackmire
 cargo build --release</code></pre>
-                </section>
+            </section>
 
-                <section id="usage" class="mb-8">
-                    <h3 class="text-2xl font-semibold mb-4 text-primary">
-                        Usage
-                    </h3>
-                    <p class="mb-4">To start Quackmire, run:</p>
-                    <pre class="bg-base-300 p-4 rounded-lg overflow-x-auto">
+            <section id="usage" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">
+                    Usage
+                </h3>
+                <p class="mb-4">To start Quackmire, run:</p>
+                <pre class="bg-base-300 p-4 rounded-lg overflow-x-auto">
 <code>./target/release/quackmire</code></pre>
-                </section>
+            </section>
 
-                <section id="github-link" class="mb-8">
-                    <h3 class="text-2xl font-semibold mb-4 text-primary">
-                        GitHub Repository
-                    </h3>
-                    <p>
-                        <a
-                            href="https://github.com/jojayaro/quackmire"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn btn-primary"
-                        >
-                            View on GitHub
-                        </a>
-                    </p>
-                </section>
-            </main>
-        </div>
-        <footer-component class="mt-auto w-full"></footer-component>
-    </body>
+            <section id="github-link" class="mb-8">
+                <h3 class="text-2xl font-semibold mb-4 text-primary">
+                    GitHub Repository
+                </h3>
+                <p>
+                    <a href="https://github.com/jojayaro/quackmire" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-primary">
+                        View on GitHub
+                    </a>
+                </p>
+            </section>
+        </article>
+    </div>
+    <footer-component class="mt-auto w-full"></footer-component>
+</body>
+
 </html>
