@@ -1,3 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /pages/
+Disallow: /scripts/
+Disallow: /sources/
+Disallow: /jayaro.dev-Coverage-*
+
 Sitemap: https://jayaro.dev/sitemap.xml
